@@ -1,6 +1,7 @@
 // ! Styles for hele appen
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
+import { Box } from '@chakra-ui/layout';
 
 export const colors = {
     darkModeBg: "#262625",
@@ -45,6 +46,6 @@ export const GlobalStyle = createGlobalStyle`
     }
 `;
 
-export const AppWrapper = styled.div`
+export const AppWrapper = styled(Box)`
 
 `;
