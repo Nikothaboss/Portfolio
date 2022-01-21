@@ -26,8 +26,8 @@ const Burger = ({showMenu, toggleMenu}) => {
         );
         burgerLowerLine.start(
           showMenu
-            ? { rotate: [0, -45], y: [0, -10], transition: { duration: 0.4 } }
-            : { rotate: [-45, 0], y: [-10, 0], transition: { duration: 0.4 } }
+            ? { rotate: [0, -45], y: [0, -9], transition: { duration: 0.4 } }
+            : { rotate: [-45, 0], y: [-9, 0], transition: { duration: 0.4 } }
         );
       }, [burgerUpperLine, burgerMiddleLine, burgerLowerLine, showMenu]);
     
@@ -43,7 +43,7 @@ const Burger = ({showMenu, toggleMenu}) => {
             <MotionBox
             layout
             bg={bg}
-            width="2.2rem"
+            width="35px"
             height="4px"
             animate={burgerUpperLine}
             className='line'
@@ -60,7 +60,7 @@ const Burger = ({showMenu, toggleMenu}) => {
 
             <MotionBox
             bg={bg}
-            width="2.2rem"
+            width="35px"
             height="4px"
             animate={burgerLowerLine}
             className='line'
