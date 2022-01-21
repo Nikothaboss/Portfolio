@@ -20,7 +20,7 @@ const Header = () => {
 
 
   return (  
-  <HeaderStyled justifyContent="space-between" alignItems="center" h="8vh">
+  <HeaderStyled justifyContent="space-between" alignItems="center" h="8vh" p="20px">
       <Text fontSize="3rem" color={bg} fontFamily={fonts.displayFont}>N</Text>
       {colorMode === "dark" ? <MdOutlineWbSunny size="1.8rem" onClick={toggleColorMode} color={bg} /> : <FaMoon size="1.6rem" color={bg} onClick={toggleColorMode} />}
       <Burger showMenu={showMenu} toggleMenu={toggleMenu} />
