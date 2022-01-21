@@ -13,7 +13,8 @@ export const colors = {
 
 export const fonts = {
     lato: "'Lato', sans-serif",
-    poppins: "'Poppins', sans-serif"
+    poppins: "'Poppins', sans-serif",
+    displayFont: "'Rampart One', cursive"
 };
 
 const size = {
