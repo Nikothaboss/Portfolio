@@ -26,7 +26,7 @@ const Home = () => {
             </Text>
             {/* <Moon height="300px" width="300px"/> */}
             <WordBall height="98%" width="100%" />
-            <Box p="10px 60px" borderRadius="10px" color="white" bg={colors.darkDetailColor}>About Me</Box>
+            <Box p="10px 60px" mt="15px" borderRadius="10px" color="white" bg={colors.darkDetailColor}>About Me</Box>
             {/* <Center flexDir="column">
                 <MotionBox p="20px 40px" variants={homeAnimations} whileHover="arrowAnimation">
                     <FaArrowDown size="1.8rem" color={color} />

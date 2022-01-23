@@ -1,7 +1,7 @@
 import React from 'react';
 import { colors, fonts } from '../../app.styled';
 import { HeaderStyled } from './header.styled';
-import { Text } from '@chakra-ui/layout';
+import { Text, ListItem, UnorderedList  } from '@chakra-ui/layout';
 import {MdOutlineWbSunny} from "react-icons/md"
 import Burger from './Burger';
 import { useColorMode } from '@chakra-ui/color-mode';
@@ -15,15 +15,24 @@ const Header = () => {
   const toggleMenu =()=> setShowMenu(!showMenu)
   const closeMenu =()=> setShowMenu(false)
 
-  const bg = useColorModeValue(colors.darkDetailColor, colors.lightDetailColor);
+  const bg = useColorModeValue(colors.lightDetailColor, colors.darkDetailColor);
+  const headerBgColor = useColorModeValue(colors.darkModeBg, colors.lightDetailColor)
+  const navColor = useColorModeValue(colors.lightDetailColor, colors.darkModeBg)
   const {colorMode, toggleColorMode} = useColorMode()
 
 
   return (  
-  <HeaderStyled justifyContent="space-between" alignItems="center" h="8vh" p="20px">
-      <Text fontSize="3rem" color={bg} fontFamily={fonts.displayFont}>N</Text>
+  <HeaderStyled p="25px" bg={headerBgColor}>
+      <Text fontSize="5rem" color={bg} fontFamily={fonts.displayFont}>N</Text>
+      {/* <Burger showMenu={showMenu} toggleMenu={toggleMenu} /> */}
+      <UnorderedList color={navColor}>
+        <ListItem>Home</ListItem>
+        <ListItem>About</ListItem>
+        <ListItem>Tech</ListItem>
+        <ListItem>Projects</ListItem>
+        <ListItem>Timeline</ListItem>
+      </UnorderedList>
       {colorMode === "dark" ? <MdOutlineWbSunny size="1.8rem" onClick={toggleColorMode} color={bg} /> : <FaMoon size="1.6rem" color={bg} onClick={toggleColorMode} />}
-      <Burger showMenu={showMenu} toggleMenu={toggleMenu} />
   </HeaderStyled>
   )
 };
