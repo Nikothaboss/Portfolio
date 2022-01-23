@@ -12,7 +12,7 @@ function Word({ children, ...props }) {
     const fontColor = useColorModeValue(colors.darkModeBg, colors.lightDetailColor)
     const {colorMode} = useColorMode()
   const color = new THREE.Color()
-  const fontProps = { font: '/Inter-Bold.woff', fontSize: 2.5, color: colors.ctaColor , letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': true }
+  const fontProps = { font: '/Inter-Bold.woff', fontSize: 2.5, color: "#d41313" , letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
   const ref = useRef()
   const [hovered, setHovered] = useState(false)
   const over = (e) => (e.stopPropagation(), setHovered(true))
@@ -27,7 +27,7 @@ function Word({ children, ...props }) {
     // Make text face the camera
     ref.current.quaternion.copy(camera.quaternion)
     // Animate font color
-    ref.current.material.color.lerp(color.set(colorMode === "dark" ? colors.darkDetailColor : colors.ctaColor), 0.1)
+    // ref.current.material.color.lerp(color.set(colorMode === "dark" ? colors.darkDetailColor : colors.ctaColor), 0.9)
   })
   return <Text ref={ref} onPointerOver={over} onPointerOut={out} {...props} {...fontProps} children={children} />
 }
@@ -70,7 +70,7 @@ export default function WordBall({width, height}) {
   return (
     <Box w={width} h={height}>
         <Canvas dpr={[1, 1]} camera={{ position: [1, 1, 40], fov: 70 }}>
-          {/* <fog attach="fog" args={['#b00b', 0, 80]} /> */}
+          {/* <fog attach="fog" args={['#b00b26', 0, 80]} /> */}
           <Cloud count={14} radius={20} />
           {/* <TrackballControls /> */}
           <OrbitControls autoRotateSpeed={7} autoRotate />

@@ -48,5 +48,7 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const AppWrapper = styled(Box)`
-
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 `;

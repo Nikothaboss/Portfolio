@@ -22,10 +22,10 @@ const Header = () => {
 
 
   return (  
-  <HeaderStyled p="25px" bg={headerBgColor}>
-      <Text fontSize="5rem" color={bg} fontFamily={fonts.displayFont}>N</Text>
+  <HeaderStyled bg={headerBgColor}>
+      <Text fontSize="4rem" color={bg} fontFamily={fonts.displayFont}>N</Text>
       {/* <Burger showMenu={showMenu} toggleMenu={toggleMenu} /> */}
-      <UnorderedList color={navColor}>
+      <UnorderedList color={navColor} textAlign="center" ml="0">
         <ListItem>Home</ListItem>
         <ListItem>About</ListItem>
         <ListItem>Tech</ListItem>
