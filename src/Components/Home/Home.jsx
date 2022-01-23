@@ -22,10 +22,8 @@ const Home = () => {
                     Front end Developer
                 </Text>
                 {screenWidth > 768 && (
-                    <Flex justifyContent={"center"} w="50%" p="10px 60px" mt="15px" borderRadius="10px" textAlign={"center"} color="white" bg={colors.darkDetailColor}>About Me</Flex>
-                
-
-            )}
+                    <Flex justifyContent={"center"} w="308.56px" p="10px 60px" mt="15px" borderRadius="10px" textAlign={"center"} color="white" bg={colors.darkDetailColor}>About Me</Flex>
+                )}
             </Center>
 
             {/* <Moon height="300px" width="300px"/> */}
