@@ -7,8 +7,8 @@ export const colors = {
     darkModeBg: "#262625",
     lightModeBg: "#ECECEC",
     lightDetailColor: "#F2EDD0",
-    darkDetailColor: "#A67246",
-    ctaColor: "#FF7262"
+    darkDetailColor: "#a74646",
+    ctaColor: "#db3d2c"
 };
 
 export const fonts = {
