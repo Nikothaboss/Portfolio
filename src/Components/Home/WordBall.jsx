@@ -69,11 +69,11 @@ function Cloud({ count = 4, radius = 20 }) {
 export default function WordBall({width, height}) {
   return (
     <Box w={width} h={height}>
-        <Canvas dpr={[1, 1]} camera={{ position: [1, 1, 30], fov: 110 }}>
+        <Canvas dpr={[1, 1]} camera={{ position: [1, 1, 40], fov: 70 }}>
           {/* <fog attach="fog" args={['#b00b', 0, 80]} /> */}
           <Cloud count={14} radius={20} />
           {/* <TrackballControls /> */}
-          <OrbitControls autoRotateSpeed={4} autoRotate />
+          <OrbitControls autoRotateSpeed={7} autoRotate />
         </Canvas>
     </Box>
   )
