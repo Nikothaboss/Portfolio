@@ -5,22 +5,31 @@ import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
 import { useState } from "react";
 import { useResize } from "./utils/resize";
+import {Switch, Route, useLocation} from "react-router-dom"
+import About from "./Components/About/About";
 
 
 
 
 function App() {
+  const location = useLocation();
+
   const {screenWidth} = useResize()
   const bg = useColorModeValue(colors.lightModeBg, colors.darkModeBg);
+
   return (
     <AppWrapper bg={bg} minH="100vh" maxH="100%" maxW="100vw"  className="App">
-      <AnimatePresence>
-        {screenWidth > 950 && (
-          <Header/>
-          
-        )}
+        {screenWidth > 950 && (<Header/>)}
+      <AnimatePresence exitBeforeEnter>
+        <Switch location={location} key={location.key}>
+          <Route  path="/" exact>
+            <Home />
+          </Route>
+          <Route  path="/About" exact>
+            <About />
+          </Route>
+        </Switch>
       </AnimatePresence>
-      <Home />
     </AppWrapper>
   );
 }

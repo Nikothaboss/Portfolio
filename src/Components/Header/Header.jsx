@@ -22,7 +22,7 @@ const Header = () => {
 
 
   return (  
-  <HeaderStyled bg={headerBgColor}>
+  <HeaderStyled bg={headerBgColor} initial={{x: -120}} animate={{x: 0}} exit={{x: -120}}>
       <Text fontSize="4rem" color={bg} fontFamily={fonts.displayFont}>N</Text>
       {/* <Burger showMenu={showMenu} toggleMenu={toggleMenu} /> */}
       <UnorderedList color={navColor} textAlign="center" ml="0">
