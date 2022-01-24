@@ -46,3 +46,34 @@ export const homeAnimations = {
 
 
 }
+
+export const aboutAnimations = {
+  pageEnter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      y: {
+        duration: 1
+      },
+      opacity: {
+        duration: 2
+      }
+    }
+  },
+  pageExit: {
+    y: "-120%",
+    opacity: 0,
+    transition: {
+      y: {
+        duration: 1
+      },
+      opacity: {
+        duration: 1
+      }
+    }
+  },
+  pageInitial: {
+    y: "120%",
+    opacity: 0,
+  }
+}
