@@ -22,6 +22,7 @@ const Home = () => {
         h="100vh" 
         p="20px 0px" 
         w="100%"
+        overflow="hidden"
         variants={homeAnimations}
         exit="pageExit"
         initial="pageInitial"
@@ -30,9 +31,9 @@ const Home = () => {
         
             
             <Center flexDir="column" w="50%"  >
-                <Text color={color} fontSize={screenWidth < 768 ? "1.5rem" : "2rem"} fontWeight="bold" textAlign="left" >
+                <Text color={color} fontSize={screenWidth < 768 ? "1.5rem" : "2rem"} fontWeight="bold" textAlign="center" >
                     Hi, I'm <Text as="span" color={colors.ctaColor}>Nikolai</Text> <br/>
-                    Front end Developer
+                    I'm a Front end Developer
                 </Text>
                 {screenWidth > 768 && (
                     <>

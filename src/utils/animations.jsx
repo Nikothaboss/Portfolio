@@ -38,7 +38,7 @@ export const homeAnimations = {
       opacity:  1,
       transition: {
         opacity: {
-          duration: 2,
+          duration: 1.2,
         }
       }
     }
@@ -53,10 +53,10 @@ export const aboutAnimations = {
     opacity: 1,
     transition: {
       y: {
-        duration: 1
+        duration: .5
       },
       opacity: {
-        duration: 2
+        duration: .5
       }
     }
   },
@@ -73,7 +73,7 @@ export const aboutAnimations = {
     }
   },
   pageInitial: {
-    y: "120%",
+    y: "50%",
     opacity: 0,
   }
 }

@@ -20,7 +20,7 @@ function App() {
   return (
     <AppWrapper bg={bg} minH="100vh" maxH="100%" maxW="100vw"  className="App">
         {screenWidth > 950 && (<Header/>)}
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter={true}>
         <Switch location={location} key={location.key}>
           <Route  path="/" exact>
             <Home />

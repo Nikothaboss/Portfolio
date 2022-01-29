@@ -6,13 +6,14 @@ import { Box } from '@chakra-ui/react'
 import { useColorModeValue } from '@chakra-ui/react'
 import { colors } from '../../app.styled'
 import { useColorMode } from '@chakra-ui/react'
+import { fonts } from '../../app.styled'
 
 
 function Word({ children, ...props }) {
     const fontColor = useColorModeValue(colors.darkModeBg, colors.lightDetailColor)
     const {colorMode} = useColorMode()
   const color = new THREE.Color()
-  const fontProps = { font: '/Inter-Bold.woff', fontSize: 2.5, color: "#ce1f1f" , letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
+  const fontProps = { font: fonts.poppins, fontSize: 2.5, color: "#ce1f1f" , letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
   const ref = useRef()
   const [hovered, setHovered] = useState(false)
   const over = (e) => (e.stopPropagation(), setHovered(true))
