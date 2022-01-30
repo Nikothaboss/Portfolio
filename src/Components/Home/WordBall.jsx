@@ -9,11 +9,11 @@ import { useColorMode } from '@chakra-ui/react'
 import { fonts } from '../../app.styled'
 
 
-function Word({ children, ...props }) {
+function Word({ textColor, children, ...props  }) {
     const fontColor = useColorModeValue(colors.darkModeBg, colors.lightDetailColor)
     const {colorMode} = useColorMode()
   const color = new THREE.Color()
-  const fontProps = { font: fonts.poppins, fontSize: 2.5, color: "#ce1f1f" , letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
+  const fontProps = { font: fonts.poppins, fontSize: 2.5, color: textColor , letterSpacing: -0.05, lineHeight: 1, 'material-toneMapped': false }
   const ref = useRef()
   const [hovered, setHovered] = useState(false)
   const over = (e) => (e.stopPropagation(), setHovered(true))
@@ -52,7 +52,7 @@ const test = [
   {word: "Three.js"},
   {word: "Adobe XD"},
 ]
-function Cloud({ count = 4, radius = 20 }) {
+function Cloud({ count = 4, radius = 20, textColor }) {
   // Create a count x count random words with spherical distribution
   const words = useMemo(() => {
     const temp = []
@@ -64,15 +64,15 @@ function Cloud({ count = 4, radius = 20 }) {
       for (let j = 0; j < count; j++) temp.push([new THREE.Vector3().setFromSpherical(spherical.set(radius, phiSpan * i * i , thetaSpan * i )), test[i].word])
     return temp
   }, [count, radius])
-  return words.map(([pos, word], index) => <Word key={index} position={pos} children={word} />)
+  return words.map(([pos, word], index) => <Word key={index} position={pos} children={word} textColor={textColor} />)
 }
 
-export default function WordBall({width, height}) {
+export default function WordBall({width, height, cameraZoom, textColor}) {
   return (
     <Box w={width} h={height}>
-        <Canvas dpr={[1, 1]} camera={{ position: [1, 1, 40], fov: 70 }}>
+        <Canvas dpr={[1, 1]} camera={{ position: [1, 1, cameraZoom], fov: 70 }}>
           {/* <fog attach="fog" args={['#b00b26', 0, 80]} /> */}
-          <Cloud count={14} radius={20} />
+          <Cloud count={14} radius={20} textColor={textColor} />
           {/* <TrackballControls /> */}
           <OrbitControls autoRotateSpeed={7} autoRotate />
         </Canvas>

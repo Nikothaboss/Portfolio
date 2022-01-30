@@ -9,15 +9,17 @@ import Moon from "./Moon";
 import WordBall from "./WordBall";
 import {useResize} from "../../utils/resize"
 import { Link } from "react-router-dom";
+import { useColorMode } from "@chakra-ui/react";
 
 const Home = () => {
     const color = useColorModeValue(colors.darkModeBg, colors.lightDetailColor)
     const MotionBox = motion(Box)
     const {screenWidth} = useResize()
+    const {colorMode} = useColorMode()
     return (
         <HomeStyled 
         flexDir={screenWidth < 768 ? "column" : "row"} 
-        justifyContent="space-between" 
+        justifyContent="space-around" 
         alignItems="center" 
         h="100vh" 
         p="20px 0px" 
@@ -31,23 +33,23 @@ const Home = () => {
         
             
             <Center flexDir="column" w="50%"  >
-                <Text color={color} fontSize={screenWidth < 768 ? "1.5rem" : "2rem"} fontWeight="bold" textAlign="center" >
-                    Hi, I'm <Text as="span" color={colors.ctaColor}>Nikolai</Text> <br/>
+                <Text w="100vw" color={color} fontSize={screenWidth < 768 ? "1.5rem" : "2rem"} fontWeight="bold" textAlign="center" p="0" >
+                    Hi, I'm <Text as="span"  color={colors.darkDetailColor}>Nikolai</Text> <br/>
                     I'm a Front end Developer
                 </Text>
                 {screenWidth > 768 && (
                     <>
                         <Link to="/About">
                             <Flex
-                            justifyContent={"center"}
-                            w="308.56px"
-                            p="10px 60px"
-                            mt="15px"
-                            cursor="pointer"
-                            borderRadius="10px"
-                            textAlign={"center"}
-                            color="white"
-                            bg={colors.darkDetailColor}
+                                justifyContent={"center"}
+                                w="308.56px"
+                                p="10px 60px"
+                                mt="15px"
+                                cursor="pointer"
+                                borderRadius="10px"
+                                textAlign={"center"}
+                                color="white"
+                                bg={colors.ctaColor}
                             >
                                 About Me
                             </Flex>
@@ -60,9 +62,14 @@ const Home = () => {
             </Center>
 
             {/* <Moon height="300px" width="300px"/> */}
-            <WordBall height="60vh" width={screenWidth > 768 ? screenWidth / 2 : screenWidth - 50} />
+            <WordBall 
+                height="60vh" 
+                width={screenWidth > 768 ? screenWidth / 2 : screenWidth - 50} 
+                cameraZoom={screenWidth > 768 ? 40 : 60}
+                textColor={colorMode === "dark" ? "white" : "black"}
+                />
             {screenWidth < 768 && (
-                <Box p="10px 60px" mt="15px" borderRadius="10px" color="white" bg={colors.darkDetailColor}>About Me</Box>
+                <Box p="10px 60px" mt="15px" borderRadius="30px" color="white" bg={colors.ctaColor}>About Me</Box>
 
             )}
 

@@ -3,7 +3,6 @@ import { useColorModeValue } from "@chakra-ui/color-mode";
 import { AnimatePresence } from "framer-motion";
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
-import { useState } from "react";
 import { useResize } from "./utils/resize";
 import {Switch, Route, useLocation} from "react-router-dom"
 import About from "./Components/About/About";

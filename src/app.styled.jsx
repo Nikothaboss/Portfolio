@@ -7,7 +7,7 @@ export const colors = {
     darkModeBg: "#262625",
     lightModeBg: "#ECECEC",
     lightDetailColor: "#F2EDD0",
-    darkDetailColor: "#a74646",
+    darkDetailColor: "#A67246",
     ctaColor: "#FF7262"
 };
 
