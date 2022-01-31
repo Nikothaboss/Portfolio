@@ -31,7 +31,17 @@ const Home = () => {
         animate="pageEnter"
         >
         
-            
+            {screenWidth < 768 && (
+                <Center flexDir={"column"}>
+                    <Text fontSize={"1.2rem"} fontWeight={500} mb="1rem">
+                        Technoligies
+                    </Text>
+                    <MotionBox variants={homeAnimations} animate={"arrowAnimation"}>
+                        <FaArrowUp size={"1.2rem"} />
+                    </MotionBox>
+
+                </Center>
+            )}
             <Center flexDir="column" w="50%"  >
                 <Text w="100vw" color={color} fontSize={screenWidth < 768 ? "1.5rem" : "2rem"} fontWeight="bold" textAlign="center" p="0" >
                     Hi, I'm <Text as="span"  color={colors.darkDetailColor}>Nikolai</Text> <br/>
@@ -63,13 +73,26 @@ const Home = () => {
 
             {/* <Moon height="300px" width="300px"/> */}
             <WordBall 
-                height="60vh" 
+                height={screenWidth < 768 ? "50vh" : "60vh"} 
                 width={screenWidth > 768 ? screenWidth / 2 : screenWidth - 50} 
                 cameraZoom={screenWidth > 768 ? 40 : 60}
                 textColor={colorMode === "dark" ? "white" : "black"}
                 />
             {screenWidth < 768 && (
-                <Box p="10px 60px" mt="15px" borderRadius="30px" color="white" bg={colors.ctaColor}>About Me</Box>
+                <>
+                    <Box p="10px 60px" mb="1rem" borderRadius="30px" color="white" bg={colors.ctaColor}>
+                        About Me
+                    </Box>
+                    
+                    <Center flexDir={"column"}>
+                        <MotionBox variants={homeAnimations} animate={"arrowAnimation2"}>
+                            <FaArrowDown size={"1.2rem"} />
+                        </MotionBox>
+                        <Text fontSize={"1.2rem"} fontWeight={500}  >
+                            Projects
+                        </Text>
+                    </Center>
+                </>
 
             )}
 

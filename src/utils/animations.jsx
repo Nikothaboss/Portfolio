@@ -18,6 +18,24 @@ export const homeAnimations = {
           },
         },
     },
+    arrowAnimation2: {
+      y: [-15, 0, -15],
+      scale: 1.1,
+      transition: {
+          type: "spring",
+          stiffness: 550,
+        x: {
+          repeat: Infinity,
+          duration: 0.6,
+          
+        },
+        y: {
+          repeat: Infinity,
+          duration: .9,
+          ease: 'easeOut',
+        },
+      },
+  },
     pageExit: {
       y: "-120%",
       opacity: 0,
