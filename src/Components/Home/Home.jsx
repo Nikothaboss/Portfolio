@@ -5,7 +5,6 @@ import { colors } from "../../app.styled";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { motion } from "framer-motion";
 import { homeAnimations } from "../../utils/animations";
-import Moon from "./Moon";
 import WordBall from "./WordBall";
 import {useResize} from "../../utils/resize"
 import { Link } from "react-router-dom";
@@ -13,6 +12,7 @@ import { useColorMode } from "@chakra-ui/react";
 
 const Home = () => {
     const color = useColorModeValue(colors.darkModeBg, colors.lightDetailColor)
+    const arrowColor = useColorModeValue(colors.darkDetailColor, colors.lightModeBg)
     const MotionBox = motion(Box)
     const {screenWidth} = useResize()
     const {colorMode} = useColorMode()
@@ -37,7 +37,7 @@ const Home = () => {
                         Technoligies
                     </Text>
                     <MotionBox variants={homeAnimations} animate={"arrowAnimation"}>
-                        <FaArrowUp size={"1.2rem"} />
+                        <FaArrowUp size={"1.2rem"} color={arrowColor} />
                     </MotionBox>
 
                 </Center>
@@ -65,7 +65,9 @@ const Home = () => {
                             </Flex>
                         </Link>
                         <Box h="1rem"></Box>
-                        <MotionBox  variants={homeAnimations} animate="arrowAnimation"><FaArrowUp size={"1.5rem"}/></MotionBox>
+                        <MotionBox  variants={homeAnimations} animate="arrowAnimation">
+                            <FaArrowUp size={"1.5rem"} color={arrowColor} />
+                        </MotionBox>
                     </>
 
                 )}
@@ -76,7 +78,7 @@ const Home = () => {
                 height={screenWidth < 768 ? "50vh" : "60vh"} 
                 width={screenWidth > 768 ? screenWidth / 2 : screenWidth - 50} 
                 cameraZoom={screenWidth > 768 ? 40 : 60}
-                textColor={colorMode === "dark" ? "white" : "black"}
+                textColor={colorMode === "dark" ? colors.lightModeBg : colors.darkModeBg}
                 />
             {screenWidth < 768 && (
                 <>
@@ -86,7 +88,7 @@ const Home = () => {
                     
                     <Center flexDir={"column"}>
                         <MotionBox variants={homeAnimations} animate={"arrowAnimation2"}>
-                            <FaArrowDown size={"1.2rem"} />
+                            <FaArrowDown size={"1.2rem"} color={arrowColor} />
                         </MotionBox>
                         <Text fontSize={"1.2rem"} fontWeight={500}  >
                             Projects
