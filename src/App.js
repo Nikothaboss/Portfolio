@@ -6,6 +6,7 @@ import Home from "./Components/Home/Home";
 import { useResize } from "./utils/resize";
 import {Switch, Route, useLocation} from "react-router-dom"
 import About from "./Components/About/About";
+import Timeline from "./Components/Timeline/Timeline";
 
 
 
@@ -26,6 +27,9 @@ function App() {
           </Route>
           <Route  path="/About" exact>
             <About />
+          </Route>
+          <Route  path="/Timeline" exact>
+            <Timeline />
           </Route>
         </Switch>
       </AnimatePresence>
