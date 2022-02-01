@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { Flex } from "@chakra-ui/react";
 import { colors } from "../../app.styled";
+import { motion } from "framer-motion";
 
-export const TimelineStyled = styled(Flex) `
+const MotionFlex = motion(Flex)
+export const TimelineStyled = styled(MotionFlex) `
 
 .timeline{
     /* border-left: 5px solid ${colors.darkDetailColor}; */

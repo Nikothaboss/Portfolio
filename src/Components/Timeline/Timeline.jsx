@@ -1,9 +1,10 @@
 import { TimelineStyled } from "./timeline.styled"
 import { Flex, Text } from "@chakra-ui/react"
-import { colors, device } from "../../app.styled"
+import { colors } from "../../app.styled"
 import { useColorModeValue } from "@chakra-ui/react"
 import { useFetch } from "../../utils/fetch"
 import { useResize } from "../../utils/resize"
+import { aboutAnimations } from "../../utils/animations"
 
 
 const TimelineObject = ({year, text, screenWidth, data}) => {
@@ -32,6 +33,10 @@ const Timeline = () => {
           flexDir="column" 
           alignItems="center" 
           justifyContent="flex-end"
+          variants={aboutAnimations}
+          initial="pageInitial"
+          animate="pageEnter"
+          exit="pageExit"
             >
             <Flex 
               className="timeline" 
