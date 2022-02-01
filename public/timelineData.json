@@ -1,17 +1,21 @@
 [
     {
+        "id" : 1,
         "year": "2019",
         "text": "Started my journey with a python course on codecademy, this tought me a lot about programming foundations"
     },
     {
+        "id" : 2,
         "year": "2020",
         "text": "I wanted to move into the field of web development and started my first year at Noroff School of Technology focusing on Front end development"
     },
     {
+        "id" : 3,
         "year": "2021",
         "text": "After getting comfortable with HTML/CSS & JS i landed a job as a mentor at Noroff, the same school I was attending. While doing this I learned React on the side."
     },
     {
+        "id" : 4,
         "year": "2022",
         "text": "Still working as a mentor while I am at my last year of school. Im feeling confident in React and my abilities to provide value to future employers"
     }

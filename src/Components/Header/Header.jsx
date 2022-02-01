@@ -16,7 +16,7 @@ const Header = () => {
   const closeMenu =()=> setShowMenu(false)
 
   const bg = useColorModeValue(colors.lightDetailColor, colors.darkDetailColor);
-  const headerBgColor = useColorModeValue(colors.darkModeBg, colors.lightDetailColor)
+  const headerBgColor = useColorModeValue(colors.darkModeBg, colors.lightModeBg)
   const navColor = useColorModeValue(colors.lightDetailColor, colors.darkModeBg)
   const {colorMode, toggleColorMode} = useColorMode()
 
@@ -25,7 +25,7 @@ const Header = () => {
   <HeaderStyled bg={headerBgColor} initial={{x: -120}} animate={{x: 0}} exit={{x: -120}}>
       <Text fontSize="4rem" color={bg} fontFamily={fonts.displayFont}>N</Text>
       {/* <Burger showMenu={showMenu} toggleMenu={toggleMenu} /> */}
-      <UnorderedList color={navColor} textAlign="center" ml="0">
+      <UnorderedList color={navColor} textAlign="center" ml="0" color={bg}>
         <ListItem>Home</ListItem>
         <ListItem>About</ListItem>
         <ListItem>Tech</ListItem>

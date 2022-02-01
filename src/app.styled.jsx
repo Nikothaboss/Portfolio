@@ -6,8 +6,8 @@ import { Box } from '@chakra-ui/layout';
 export const colors = {
     darkModeBg: "#262625",
     lightModeBg: "#ECECEC",
-    lightDetailColor: "#F2EDD0",
-    darkDetailColor: "#A67246",
+    lightDetailColor: "#92897c",
+    darkDetailColor: "#51b2b6",
     ctaColor: "#FF7262"
 };
 
