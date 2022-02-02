@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import { useColorMode } from "@chakra-ui/react";
 
 const Home = () => {
-    const color = useColorModeValue(colors.darkModeBg, colors.lightDetailColor)
+    const color = useColorModeValue(colors.darkModeBg, colors.lightModeBg)
     const arrowColor = useColorModeValue(colors.darkDetailColor, colors.lightModeBg)
     const MotionBox = motion(Box)
     const {screenWidth} = useResize()

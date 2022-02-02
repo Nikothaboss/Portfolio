@@ -4,11 +4,11 @@ import { createGlobalStyle } from 'styled-components';
 import { Box } from '@chakra-ui/layout';
 
 export const colors = {
-    darkModeBg: "#262625",
-    lightModeBg: "#ECECEC",
-    lightDetailColor: "#92897c",
-    darkDetailColor: "#51b2b6",
-    ctaColor: "#FF7262"
+    darkModeBg: "#081E26",
+    lightModeBg: "#f5f5f5",
+    lightDetailColor: "#d8aa9a",
+    darkDetailColor: "#73541A",
+    ctaColor: "#c84b2f"
 };
 
 export const fonts = {
