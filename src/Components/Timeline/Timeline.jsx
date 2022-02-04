@@ -42,7 +42,7 @@ const Timeline = () => {
               className="timeline" 
               h="100%"
               w={screenWidth > 768 ? "100%" : screenWidth < 550 ? "100%" : "70%" }
-              overflowX={ "scroll"}  
+            //   overflowX={ "scroll"}  
               justifyContent={"flex-end"}
               alignItems={"flex-end"}
             >

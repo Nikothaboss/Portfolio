@@ -25,11 +25,9 @@ const Header = () => {
   return (  
   <HeaderStyled bg={headerBgColor} initial={{x: -120}} animate={{x: 0}} exit={{x: -120}}>
       <Link to="/" exact>
-        <Circle className="logo" >
           <Text textAlign={"center"} w="100%" fontSize="3.2rem" color={bg} fontFamily={fonts.displayFont}>
             N
           </Text>
-        </Circle>
       </Link>
       {/* <Burger showMenu={showMenu} toggleMenu={toggleMenu} /> */}
       <UnorderedList textAlign="center" ml="0" color={bg}>
@@ -39,7 +37,7 @@ const Header = () => {
         <ListItem>Projects</ListItem>
         <ListItem>Timeline</ListItem>
       </UnorderedList>
-      {colorMode === "dark" ? <MdOutlineWbSunny size="1.8rem" onClick={toggleColorMode} color={bg} /> : <FaMoon size="1.6rem" color={bg} onClick={toggleColorMode} />}
+      {colorMode === "dark" ? <MdOutlineWbSunny cursor="pointer" size="1.8rem" onClick={toggleColorMode} color={bg} /> : <FaMoon size="1.6rem" color={bg} onClick={toggleColorMode} />}
   </HeaderStyled>
   )
 };

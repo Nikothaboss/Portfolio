@@ -56,7 +56,7 @@ export const homeAnimations = {
       opacity:  1,
       transition: {
         opacity: {
-          duration: 1.2,
+          duration: 1.5,
         }
       }
     }
