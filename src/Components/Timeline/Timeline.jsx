@@ -16,7 +16,7 @@ const TimelineObject = ({year, text, screenWidth, data}) => {
       w={screenWidth > 768 ? `${100 / data.length}%` : "100%"}  
       p="20px"
       >
-        {screenWidth > 385 && <Flex w="3rem" h=".2rem" mr="1rem" mt="20px" bg={color}></Flex>}
+        {screenWidth > 470 && <Flex w="3rem" h=".2rem" mr="1rem" mt="20px" bg={color}></Flex>}
         <Text fontSize={"1.5rem"} mr="1rem" color={colors.ctaColor} >{year}</Text>
         <Text fontSize={"1rem"}>{text}</Text>
     </Flex>
@@ -77,7 +77,7 @@ const Timeline = () => {
               w={screenWidth > 768 ? "100%" : screenWidth < 550 ? "100%" : "70%" }
             //   overflowX={ "scroll"}  
               justifyContent={"flex-end"}
-              alignItems={"flex-end"}
+              alignItems={"flex-start"}
             >
                 <Flex 
                   justifyContent={screenWidth > 768 ? "space-evenly" : "flex-end"} 
