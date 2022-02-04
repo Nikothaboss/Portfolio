@@ -45,7 +45,7 @@ const About = () => {
 
             <TimelineBtn whileHover={{scale: 1.1}} whileTap={{scale: 0.99}} cursor="pointer">
                 <Link to="/Timeline">
-                    <Text>
+                    <Text color={colors.lightModeBg}>
                         Timeline
                     </Text>
                 </Link>

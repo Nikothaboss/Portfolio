@@ -7,6 +7,7 @@ import { useResize } from "./utils/resize";
 import {Switch, Route, useLocation} from "react-router-dom"
 import About from "./Components/About/About";
 import Timeline from "./Components/Timeline/Timeline";
+import { GlobalStyle } from "./app.styled";
 
 
 
@@ -18,6 +19,8 @@ function App() {
   const bg = useColorModeValue(colors.lightModeBg, colors.darkModeBg);
 
   return (
+    <>
+    <GlobalStyle/>
     <AppWrapper bg={bg} minH="100vh" maxH="100%" maxW="100vw"  className="App">
         {screenWidth > 950 && (<Header/>)}
       <AnimatePresence exitBeforeEnter={true}>
@@ -34,6 +37,7 @@ function App() {
         </Switch>
       </AnimatePresence>
     </AppWrapper>
+    </>
   );
 }
 
