@@ -33,7 +33,7 @@ const Header = () => {
       <UnorderedList textAlign="center" ml="0" color={bg}>
         <ListItem>Home</ListItem>
         <ListItem>About</ListItem>
-        <ListItem>Tech</ListItem>
+        <ListItem><Link to="/Tech">Tech</Link></ListItem>
         <ListItem>Projects</ListItem>
         <ListItem>Timeline</ListItem>
       </UnorderedList>

@@ -1,3 +1,5 @@
+import { useSpring } from "framer-motion"
+
 export const homeAnimations = {
 
     arrowAnimation: {
@@ -95,3 +97,18 @@ export const aboutAnimations = {
     opacity: 0,
   }
 }
+
+export const textBounce = {
+  test: {
+    scale: [.9, 1, .9],
+    transition: {
+      type: "spring",
+      bounce: 1,
+      scale: {
+        duration: 1,
+        repeat: 1.5
+      }
+    }
+  },
+}
+

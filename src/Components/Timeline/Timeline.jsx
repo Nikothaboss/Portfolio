@@ -5,12 +5,16 @@ import { useColorModeValue } from "@chakra-ui/react"
 import { useFetch } from "../../utils/fetch"
 import { useResize } from "../../utils/resize"
 import { aboutAnimations } from "../../utils/animations"
+import { motion } from "framer-motion"
+import { textBounce } from "../../utils/animations"
+import { useRef } from "react"
 
 
 const TimelineObject = ({year, text, screenWidth, data}) => {
     const color = useColorModeValue(colors.darkModeBg, colors.lightModeBg)
     return (
     <Flex 
+      className="year"
       alignItems={"flex-start"} 
       flexDir={screenWidth < 768 ? "row" : "column"} 
       w={screenWidth > 768 ? `${100 / data.length}%` : "100%"}  
@@ -27,53 +31,53 @@ const TimelineObject = ({year, text, screenWidth, data}) => {
 const Timeline = () => {
     const {data} = useFetch("./timelineData.json")
     const {screenWidth} = useResize()
+    const letter = useRef(null)
+    const MotionText = motion(Text)
+
+    console.log(letter)
+
     return (
         <TimelineStyled 
           minH="100vh" 
           w="100vw" 
           flexDir="column" 
           alignItems="center" 
-          justifyContent="flex-end"
+          justifyContent="space-around"
           variants={aboutAnimations}
           initial="pageInitial"
           animate="pageEnter"
           exit="pageExit"
         >
-            <Text 
-              as="h1" 
-              fontSize={ screenWidth < 425 ? "4rem" : "5rem"} 
-              textAlign={"left"}
-              w="100%" 
-              p="20px"
-              fontFamily={fonts.poppins}
-              opacity=".7"
-              >
-                  Timeline
-            </Text>
-            <Text
-              w="100%"
-              p="0px 30px"
-              fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}
-            >
-                This is a short summary of my developer journey this far
-            </Text>
-            <Text
-              w="100%"
-              p="0px 30px"
-              fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}
-            >
-                I have found my passion in life and
-            </Text>
-            <Text
-              w="100%"
-              p="0px 30px"
-              fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}
-            >
-                I'm eager to make you or your company a part of this journey
-            </Text>
+            <Flex flexDir={"column"} w="100%">
+                <MotionText
+                  as="h1"
+                  fontSize={ screenWidth < 425 ? "4rem" : "5rem"}
+                  textAlign={"left"}
+                  w="100%"
+                  p="20px"
+                  ref={letter}
+                  fontFamily={fonts.poppins}
+                  color={colors.lightDetailColor}
+                  opacity=".7"
+                  variants={textBounce}
+                  >Timeline</MotionText>
+
+                <Flex flexDir={"column"} w="100%">
+                    <Text w="100%" p="0px 30px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
+                        This is a short summary of my developer journey this far
+                    </Text>
+                    <Text w="100%" p="0px 30px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
+                        I have found my passion in life and
+                    </Text>
+                    <Text w="100%" p="0px 30px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
+                        I'm eager to make you or your company a part of this journey
+                    </Text>
+                </Flex>  
+            </Flex>
+
             <Flex 
               className="timeline" 
-              h="100%"
+            //   h="100%"
               w={screenWidth > 768 ? "100%" : screenWidth < 550 ? "100%" : "70%" }
             //   overflowX={ "scroll"}  
               justifyContent={"flex-end"}

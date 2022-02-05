@@ -8,6 +8,7 @@ import {Switch, Route, useLocation} from "react-router-dom"
 import About from "./Components/About/About";
 import Timeline from "./Components/Timeline/Timeline";
 import { GlobalStyle } from "./app.styled";
+import Tech from "./Components/Tech/Tech";
 
 
 
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route  path="/Timeline" exact>
             <Timeline />
+          </Route>
+          <Route  path="/Tech" exact>
+            <Tech />
           </Route>
         </Switch>
       </AnimatePresence>
