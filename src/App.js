@@ -10,6 +10,7 @@ import Timeline from "./Components/Timeline/Timeline";
 import { GlobalStyle } from "./app.styled";
 import Tech from "./Components/Tech/Tech";
 import Projects from "./Components/Projects/Projects";
+import Footer from "./Components/Footer/Footer";
 
 
 

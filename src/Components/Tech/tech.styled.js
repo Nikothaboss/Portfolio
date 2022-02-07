@@ -7,8 +7,9 @@ const MotionFlex = motion(Flex)
 
 export const TechStyled = styled(MotionFlex) `
     flex-direction: column;
-    padding: 40px;
+    /* padding: 40px; */
     justify-content: space-between;
+    position: relative;
     /* align-items: center; */
     @media${device.tablet} {
         /* align-items: flex-start; */
@@ -16,6 +17,7 @@ export const TechStyled = styled(MotionFlex) `
 
         .exp{
             width: 100%
+            
         }
 
         .newTech{
@@ -82,6 +84,7 @@ export const TechStyled = styled(MotionFlex) `
         justify-content: space-between;
         margin-top: 2rem;
         align-items: flex-end;
+        
     }
 
     .spacer{
@@ -104,7 +107,8 @@ export const TechStyled = styled(MotionFlex) `
         flex-direction: column;
         /* border: 1px solid red; */
         max-width: 1200px;
-        /* margin: auto; */
+        margin-bottom: 2rem;
+        padding: 40px;
     }
 
 `

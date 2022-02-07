@@ -4,6 +4,7 @@ import { fonts } from "../../app.styled"
 import { useColorMode } from "@chakra-ui/react"
 import { useResize } from "../../utils/resize"
 import { aboutAnimations } from "../../utils/animations"
+import Footer from "../Footer/Footer"
 
 import reactLogo from "../../img/logos/react-logo-2.png"
 import strapiLogo from "../../img/logos/Strapi-logo.svg"
@@ -40,6 +41,7 @@ const Tech = () => {
         )
     }
     return (
+        <>
         <TechStyled w="100%" variants={aboutAnimations} initial="pageInitial" animate="pageEnter" exit="pageExit">
             <Flex className="content-container">
                 <Text as="h1" fontFamily={fonts.poppins} fontSize="3.5rem" fontWeight={600} className="heading">
@@ -54,7 +56,7 @@ const Tech = () => {
                     <ExpObject logo={chakraLogo} field={"UX/UI"} exp={"Chakra UI & Figma"} />
                 </Flex>
                 <Flex className="spacer"></Flex>
-                <Text as="h2" fontSize={"1.5rem"} fontWeight={600} fontFamily={fonts.poppins}>
+                <Text as="h2" fontSize={"1.5rem"} fontWeight={600} fontFamily={fonts.poppins} >
                     Technologies I want to work with
                 </Text>
                 <Flex w={screenWidth > 950 ? "60%":"100%"} className="newTech">
@@ -63,7 +65,10 @@ const Tech = () => {
                     <NewTech logo={colorMode === "dark" ? threeLogo : darkThreeLogo} tech={"Three.js"} />
                 </Flex>
             </Flex>
+            <Footer />
         </TechStyled>
+            
+        </>
     )
 }
 
