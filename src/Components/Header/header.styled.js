@@ -6,7 +6,7 @@ const MotionFlex = motion(Flex)
 
 export const HeaderStyled = styled(MotionFlex) `
     flex-direction: column;
-    padding: 30px;
+    padding: 20px;
     justify-content: space-between;
     align-items: center;
     height: 100vh;
