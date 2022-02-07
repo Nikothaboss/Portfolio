@@ -1,10 +1,34 @@
 import styled from "styled-components"
 import { Flex } from "@chakra-ui/react"
-import { colors } from "../../app.styled"
+import { colors, device } from "../../app.styled"
 
 export const TechStyled = styled(Flex) `
     flex-direction: column;
     padding: 40px;
+    justify-content: space-between;
+    @media${device.tablet} {
+        align-items: flex-start;
+        
+
+        .exp{
+            width: 100%
+        }
+
+        .newTech{
+            
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .intro-text{
+            width: 100%;
+        }
+
+        .heading{
+            text-align: left;
+            font-size: 3rem;
+        }
+    }
 
     .logo{
         width: 50px;
@@ -28,10 +52,11 @@ export const TechStyled = styled(Flex) `
     }
 
     .newTech{
-        margin: 2rem 0;
+        margin: 2rem 0 0 0;
         justify-content: space-between;
         align-items: flex-start;
-        width: 50%;
+        
+        
     }
 
 `
