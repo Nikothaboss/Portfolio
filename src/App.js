@@ -9,6 +9,7 @@ import About from "./Components/About/About";
 import Timeline from "./Components/Timeline/Timeline";
 import { GlobalStyle } from "./app.styled";
 import Tech from "./Components/Tech/Tech";
+import Projects from "./Components/Projects/Projects";
 
 
 
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route  path="/Tech" exact>
             <Tech />
+          </Route>
+          <Route  path="/Projects" exact>
+            <Projects />
           </Route>
         </Switch>
       </AnimatePresence>

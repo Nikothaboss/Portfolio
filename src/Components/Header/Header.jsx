@@ -31,11 +31,11 @@ const Header = () => {
       </Link>
       {/* <Burger showMenu={showMenu} toggleMenu={toggleMenu} /> */}
       <UnorderedList textAlign="center" ml="0" color={bg}>
-        <ListItem>Home</ListItem>
-        <ListItem>About</ListItem>
+        <ListItem><Link to="/">Home</Link></ListItem>
+        <ListItem><Link to="/About">About</Link></ListItem>
         <ListItem><Link to="/Tech">Tech</Link></ListItem>
-        <ListItem>Projects</ListItem>
-        <ListItem>Timeline</ListItem>
+        <ListItem><Link to="/Projects">Projects</Link></ListItem>
+        <ListItem><Link to="/Timeline">Timeline</Link></ListItem>
       </UnorderedList>
       {colorMode === "dark" ? <MdOutlineWbSunny cursor="pointer" size="1.8rem" onClick={toggleColorMode} color={bg} /> : <FaMoon size="1.6rem" color={bg} onClick={toggleColorMode} />}
   </HeaderStyled>

@@ -1,10 +1,11 @@
-import React from 'react'
+import { ProjectsStyled } from "./projects.styled"
+
 
 const Projects = () => {
     return (
-        <div>
+        <ProjectsStyled minH="100vh" minW="100vw">
             
-        </div>
+        </ProjectsStyled>
     )
 }
 
