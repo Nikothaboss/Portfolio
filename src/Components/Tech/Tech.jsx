@@ -3,6 +3,7 @@ import { Text, Flex } from "@chakra-ui/react"
 import { fonts } from "../../app.styled"
 import { useColorMode } from "@chakra-ui/react"
 import { useResize } from "../../utils/resize"
+import { aboutAnimations } from "../../utils/animations"
 
 import reactLogo from "../../img/logos/react-logo-2.png"
 import strapiLogo from "../../img/logos/Strapi-logo.svg"
@@ -39,12 +40,12 @@ const Tech = () => {
         )
     }
     return (
-        <TechStyled w="100%">
+        <TechStyled w="100%" variants={aboutAnimations} initial="pageInitial" animate="pageEnter" exit="pageExit">
             <Flex className="content-container">
                 <Text as="h1" fontFamily={fonts.poppins} fontSize="3.5rem" fontWeight={600} className="heading">
                     Technologies
                 </Text>
-                <Text fontSize={"1.2rem"} w="39%" className="intro-text">
+                <Text fontSize={"1.2rem"} w="40%" className="intro-text">
                     I have worked with a variaty of technologies relevant to Front end Development
                 </Text>
                 <Flex w={screenWidth > 950 ? "60%":"100%"} className="exp">

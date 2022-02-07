@@ -1,8 +1,11 @@
 import styled from "styled-components"
 import { Flex } from "@chakra-ui/react"
 import { colors, device } from "../../app.styled"
+import { motion } from "framer-motion"
 
-export const TechStyled = styled(Flex) `
+const MotionFlex = motion(Flex)
+
+export const TechStyled = styled(MotionFlex) `
     flex-direction: column;
     padding: 40px;
     justify-content: space-between;
