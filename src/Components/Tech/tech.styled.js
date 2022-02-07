@@ -6,8 +6,9 @@ export const TechStyled = styled(Flex) `
     flex-direction: column;
     padding: 40px;
     justify-content: space-between;
+    /* align-items: center; */
     @media${device.tablet} {
-        align-items: flex-start;
+        /* align-items: flex-start; */
         
 
         .exp{
@@ -30,17 +31,54 @@ export const TechStyled = styled(Flex) `
         }
     }
 
+    @media${device.mobileL}{
+        .newTech{
+            flex-direction: column;
+            justify-content: flex-start
+            
+        }
+
+        .exp{
+            flex-direction: column;
+        }
+
+        .techObj{
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+        }
+
+        .techObj2{
+            justify-content: flex-start;
+            
+            width: 100%;
+        }
+        .heading{
+            font-size: 2rem;
+        }
+        .intro-text{
+            font-size: 1.1rem;
+        }
+        .middle{
+            margin: 1rem 0;
+        }
+    }
+
     .logo{
         width: 50px;
     }
 
     .logo-lg{
         width: 100px;
+        @media${device.mobileL}{
+            width: 150px;
+        }
     }
 
     .exp{
         justify-content: space-between;
         margin-top: 2rem;
+        align-items: flex-end;
     }
 
     .spacer{
@@ -57,6 +95,13 @@ export const TechStyled = styled(Flex) `
         align-items: flex-start;
         
         
+    }
+
+    .content-container{
+        flex-direction: column;
+        /* border: 1px solid red; */
+        max-width: 1200px;
+        /* margin: auto; */
     }
 
 `

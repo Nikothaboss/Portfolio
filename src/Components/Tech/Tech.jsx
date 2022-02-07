@@ -20,9 +20,9 @@ const Tech = () => {
     const {colorMode} = useColorMode()
     const {screenWidth} = useResize()
 
-    const ExpObject = ({logo, field, exp}) => {
+    const ExpObject = ({logo, field, exp, extraClass=""}) => {
         return (
-            <Flex flexDir={"column"} w={"100%"} justifyContent={"space-between"}>
+            <Flex flexDir={"column"}  justifyContent={"space-between"} className={`techObj2 ${extraClass}`}>
                 <img src={logo} alt="" className="logo" />
                 <Text fontSize={"1.2rem"} fontWeight={800}>{field}</Text>
                 <Text w="80%">Experience with {exp}</Text>
@@ -30,9 +30,9 @@ const Tech = () => {
         )
     }
 
-    const NewTech = ({logo, tech}) => {
+    const NewTech = ({logo, tech, extraClass=""}) => {
         return (
-            <Flex flexDir={"column"} justifyContent={"space-between"} alignItems={"center"} h="100%">
+            <Flex flexDir={"column"} justifyContent={"space-between"} alignItems={"center"} h="100%" className={`techObj ${extraClass}`}>
                 <img src={logo} alt="" className="logo-lg" />
                 <Text fontSize={"1.2rem"}>{tech}</Text>
             </Flex>
@@ -40,26 +40,27 @@ const Tech = () => {
     }
     return (
         <TechStyled w="100%">
-            <Text as="h1" fontFamily={fonts.poppins} fontSize="3.5rem" fontWeight={600} className="heading">
-                Technologies
-            </Text>
-            <Text fontSize={"1.2rem"} w="39%" className="intro-text">
-                I have worked with a variaty of technologies relevant to Front end Development
-            </Text>
-            <Flex w={screenWidth > 768 ? "60%":"100%"} className="exp">
-                <ExpObject logo={reactLogo} field={"Front End"} exp={"React"} />
-                <ExpObject logo={strapiLogo} field={"Back End"} exp={"Strapi & Heroku"} />
-                <ExpObject logo={chakraLogo} field={"UX/UI"} exp={"Chakra UI & Figma"} />
-            </Flex>
-
-            <Flex className="spacer"></Flex>
-            <Text as="h2" fontSize={"1.5rem"} fontWeight={600} fontFamily={fonts.poppins}>
-                Technologies I want to work with
-            </Text>
-            <Flex w={screenWidth > 768 ? "60%":"100%"} className="newTech">
-                <NewTech logo={colorMode === "dark" ? nextLogo : darkNextLogo} tech={"Next.js"} />
-                <NewTech logo={d3Logo} tech={"D3.js"} />
-                <NewTech logo={colorMode === "dark" ? threeLogo : darkThreeLogo} tech={"Three.js"} />
+            <Flex className="content-container">
+                <Text as="h1" fontFamily={fonts.poppins} fontSize="3.5rem" fontWeight={600} className="heading">
+                    Technologies
+                </Text>
+                <Text fontSize={"1.2rem"} w="39%" className="intro-text">
+                    I have worked with a variaty of technologies relevant to Front end Development
+                </Text>
+                <Flex w={screenWidth > 950 ? "60%":"100%"} className="exp">
+                    <ExpObject logo={reactLogo} field={"Front End"} exp={"JavaScript & React"} />
+                    <ExpObject logo={strapiLogo} field={"Back End"} exp={"Strapi & Heroku"} extraClass={"middle"} />
+                    <ExpObject logo={chakraLogo} field={"UX/UI"} exp={"Chakra UI & Figma"} />
+                </Flex>
+                <Flex className="spacer"></Flex>
+                <Text as="h2" fontSize={"1.5rem"} fontWeight={600} fontFamily={fonts.poppins}>
+                    Technologies I want to work with
+                </Text>
+                <Flex w={screenWidth > 950 ? "60%":"100%"} className="newTech">
+                    <NewTech logo={colorMode === "dark" ? nextLogo : darkNextLogo} tech={"Next.js"} />
+                    <NewTech logo={d3Logo} tech={"D3.js"} extraClass={"middle"} />
+                    <NewTech logo={colorMode === "dark" ? threeLogo : darkThreeLogo} tech={"Three.js"} />
+                </Flex>
             </Flex>
         </TechStyled>
     )
