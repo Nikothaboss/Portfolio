@@ -1,0 +1,8 @@
+[
+    {
+        "id": 1,
+        "project": "Game Zone e-commerce",
+        "description": "This was an exam on my second year at Noroff, the task was to make an e-commerce for a fictional company of my choosing using Strapi as an API hosted on Heroku",
+        "image": ""
+    }
+]
