@@ -51,7 +51,7 @@ const Timeline = () => {
           exit="pageExit"
         >
           <Flex flexDir="column" className="timeline-container">
-            <Flex flexDir={"column"} w="100%">
+            <Flex flexDir={"column"} w="100%" pt="3rem">
                 <MotionText
                   as="h1"
                   fontSize={ screenWidth < 425 ? "4rem" : "5rem"}

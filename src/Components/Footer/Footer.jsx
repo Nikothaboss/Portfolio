@@ -2,12 +2,13 @@ import { FooterStyled } from "./footer.styled";
 import { useColorModeValue } from "@chakra-ui/react";
 import { Text, Flex } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdMail } from "react-icons/md";
+import { useResize } from "../../utils/resize";
 import { footerAnimations } from "../../utils/animations";
 
 
 const Footer = () => {
     const bg = useColorModeValue("#07151a", "#fff")
+    const {screenWidth} = useResize()
     return (
         <FooterStyled 
           variants={footerAnimations}
@@ -16,7 +17,7 @@ const Footer = () => {
           exit="initial"
         >
             <Flex className="contact-info">
-                <Flex w="20vw" h="3px" mr="1rem" bg={bg}></Flex>
+                { screenWidth > 645 && <Flex w="20vw" h="3px" mr="1rem" bg={bg} borderRadius={"2px"}></Flex>}
                 {/* <MdMail size={"1.5rem"}/> */}
                 <Text fontWeight="800">nreedlarsen@gmail.com</Text>
             </Flex>
@@ -27,7 +28,7 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/nikolai-reed-larsen-681697214/" className="social-icon">
                     <FaLinkedin size="2rem" />
                 </a>
-                <Flex w="20vw" h="3px" mr="1rem" bg={bg}></Flex>
+                { screenWidth > 645 && <Flex w="20vw" h="3px" mr="1rem" bg={bg} borderRadius={"2px"}></Flex>}
             </Flex>
         </FooterStyled>
     )
