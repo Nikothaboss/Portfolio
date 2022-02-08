@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import { Flex } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
-export const FooterStyled = styled(Flex) `
+const MotionFlex = motion(Flex);
+export const FooterStyled = styled(MotionFlex) `
     
     width: 100%;
     /* border: 1px solid red; */

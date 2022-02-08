@@ -3,11 +3,18 @@ import { useColorModeValue } from "@chakra-ui/react";
 import { Text, Flex } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
+import { footerAnimations } from "../../utils/animations";
+
 
 const Footer = () => {
     const bg = useColorModeValue("#fff", "#07151a")
     return (
-        <FooterStyled bg={bg}>
+        <FooterStyled bg={bg}
+          variants={footerAnimations}
+          initial="initial"
+          animate="animate"
+          exit="initial"
+        >
             <Flex className="contact-info">
                 <MdMail size={"1.5rem"}/>
                 <Text>nreedlarsen@gmail.com</Text>

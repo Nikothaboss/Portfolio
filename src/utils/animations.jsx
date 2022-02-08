@@ -112,3 +112,27 @@ export const textBounce = {
   },
 }
 
+export const footerAnimations = {
+  initial: {
+    opacity: 0,
+    transition: {
+      type: "spring",
+      bounce: .1,
+      opacity: {
+        duration: .1,
+      }
+    }
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      opacity: {
+        duration: 1
+      }
+    }
+  },
+  exit: {
+
+  }
+}
+
