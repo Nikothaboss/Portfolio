@@ -9,6 +9,8 @@ import { motion } from "framer-motion"
 import { textBounce } from "../../utils/animations"
 import { useRef } from "react"
 
+import Footer from "../Footer/Footer"
+
 
 const TimelineObject = ({year, text, screenWidth, data}) => {
     const color = useColorModeValue(colors.darkModeBg, colors.lightModeBg)
@@ -48,13 +50,14 @@ const Timeline = () => {
           animate="pageEnter"
           exit="pageExit"
         >
+          <Flex flexDir="column" className="timeline-container">
             <Flex flexDir={"column"} w="100%">
                 <MotionText
                   as="h1"
                   fontSize={ screenWidth < 425 ? "4rem" : "5rem"}
                   textAlign={"left"}
                   w="100%"
-                  p="20px"
+                  
                   ref={letter}
                   fontFamily={fonts.poppins}
                   color={colors.lightDetailColor}
@@ -63,13 +66,13 @@ const Timeline = () => {
                   >Timeline</MotionText>
 
                 <Flex flexDir={"column"} w="100%">
-                    <Text w="100%" p="0px 30px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
+                    <Text w="100%" p="0px 10px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
                         This is a short summary of my developer journey this far
                     </Text>
-                    <Text w="100%" p="0px 30px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
+                    <Text w="100%" p="0px 10px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
                         I have found my passion in life and
                     </Text>
-                    <Text w="100%" p="0px 30px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
+                    <Text w="100%" p="0px 10px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
                         I'm eager to make you or your company a part of this journey
                     </Text>
                 </Flex>  
@@ -100,7 +103,8 @@ const Timeline = () => {
                     })}
                 </Flex>
             </Flex>
-            
+            </Flex>
+            <Footer />
         </TimelineStyled>
     )
 }

@@ -5,7 +5,7 @@ export const FooterStyled = styled(Flex) `
     
     width: 100%;
     /* border: 1px solid red; */
-    padding: 20px;
+    padding: 25px;
     justify-content: space-between;
     align-items: center;
 
@@ -14,11 +14,11 @@ export const FooterStyled = styled(Flex) `
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 20%;
+        width: 200px;
     }
 
     .social-media {
         justify-content: space-between;
-        width: 10%;
+        width: 100px;
     }
 `

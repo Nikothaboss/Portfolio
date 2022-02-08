@@ -1,11 +1,12 @@
 import React from 'react'
 import ProfilePic from "../../img/profile-picture.jpg"
 import { AboutStyled, TimelineBtn} from './about.styled'
-import { Circle, Text } from '@chakra-ui/react'
+import { Circle, Text, Flex } from '@chakra-ui/react'
 import { colors, fonts } from '../../app.styled'
 import { aboutAnimations } from '../../utils/animations'
 import { Link } from 'react-router-dom'
 import { useResize } from '../../utils/resize'
+import Footer from "../Footer/Footer"
 
 
 const About = () => {
@@ -18,7 +19,9 @@ const About = () => {
         animate="pageEnter"
         overflow="hidden"
         h="100vh"
+        
             >
+        <Flex className="about-container">
             <Circle 
             backgroundImage={ProfilePic} 
             backgroundPosition="center" 
@@ -50,8 +53,8 @@ const About = () => {
                     </Text>
                 </Link>
             </TimelineBtn>
-
-
+        </Flex>
+        <Footer />
         </AboutStyled>
     )
 }
