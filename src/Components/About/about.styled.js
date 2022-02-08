@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { Flex, Center } from "@chakra-ui/layout";
-import { colors } from "../../app.styled";
+import { colors, device } from "../../app.styled";
 
 const MotionFlex = motion(Flex);
 const MotionCenter = motion(Center);
@@ -19,6 +19,10 @@ export const AboutStyled = styled(MotionFlex) `
         align-items: center;
         padding: 20px;
         justify-content: space-between;
+
+        @media${device.mobileL}{
+            padding: 0;
+        }
     }
 
     .profile-pic{

@@ -18,7 +18,7 @@ const About = () => {
         initial="pageInitial"
         animate="pageEnter"
         overflow="hidden"
-        h="100vh"
+        minH="100vh"
         
             >
         <Flex className="about-container">
@@ -36,12 +36,12 @@ const About = () => {
             <Text as="h1" m="10" fontFamily={fonts.poppins} fontSize={24} letterSpacing={2.5} color={colors.ctaColor} fontWeight={600}>
                 Nikolai Reed-Larsen
             </Text>
-            <Text fontFamily={fonts.poppins} p={screenWidth < 768 ? "0 2.3rem" : "0 1rem"} maxWidth={750} mb="5" fontSize={screenWidth < 768 ? 14 : 16}>
+            <Text fontFamily={fonts.poppins} p={screenWidth < 768 ? "0 2.3rem" : "0 0rem"} maxWidth={650} mb="5" fontSize={screenWidth < 768 ? 14 : 16}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </Text>
                 
-            <Text fontFamily={fonts.poppins} p={screenWidth < 768 ? "0 2.3rem" : "0 1rem"} maxW={750} fontSize={screenWidth < 768 ? 14 : 16}>
+            <Text fontFamily={fonts.poppins} p={screenWidth < 768 ? "0 2.3rem" : "0"} maxW={650} fontSize={screenWidth < 768 ? 14 : 16}>
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </Text>

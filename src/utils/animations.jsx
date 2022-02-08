@@ -117,7 +117,7 @@ export const footerAnimations = {
     opacity: 0,
     transition: {
       type: "spring",
-      bounce: .1,
+      bounce: .7,
       opacity: {
         duration: .1,
       }
@@ -127,7 +127,7 @@ export const footerAnimations = {
     opacity: 1,
     transition: {
       opacity: {
-        duration: 1
+        duration: 1.2
       }
     }
   },

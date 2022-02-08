@@ -16,11 +16,16 @@ export const FooterStyled = styled(MotionFlex) `
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        width: 200px;
+        /* width: 200px; */
     }
 
     .social-media {
         justify-content: space-between;
-        width: 100px;
+        /* width: 100px; */
+        align-items: center;
+    }
+
+    .social-icon{
+        margin-right: 1rem;
     }
 `
