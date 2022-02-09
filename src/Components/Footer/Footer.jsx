@@ -17,7 +17,7 @@ const Footer = () => {
           exit="initial"
         >
             <Flex className="contact-info">
-                { screenWidth > 645 && <Flex w="20vw" h="3px" mr="1rem" bg={bg} borderRadius={"2px"}></Flex>}
+                { screenWidth > 645 && <Flex w="100%" h="2px" mr="1rem" bg={bg} borderRadius={"2px"}></Flex>}
                 {/* <MdMail size={"1.5rem"}/> */}
                 <Text fontWeight="800">nreedlarsen@gmail.com</Text>
             </Flex>
@@ -28,7 +28,7 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/in/nikolai-reed-larsen-681697214/" className="social-icon">
                     <FaLinkedin size="2rem" />
                 </a>
-                { screenWidth > 645 && <Flex w="20vw" h="3px" mr="1rem" bg={bg} borderRadius={"2px"}></Flex>}
+                { screenWidth > 645 && <Flex w="100%" h="2px" mr="1rem" bg={bg} borderRadius={"2px"}></Flex>}
             </Flex>
         </FooterStyled>
     )

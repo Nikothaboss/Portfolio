@@ -119,7 +119,7 @@ export const footerAnimations = {
       type: "spring",
       bounce: .7,
       opacity: {
-        duration: .1,
+        duration: .2,
       }
     }
   },

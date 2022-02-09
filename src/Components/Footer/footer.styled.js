@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { device } from "../../app.styled";
 
 const MotionFlex = motion(Flex);
 export const FooterStyled = styled(MotionFlex) `
@@ -16,13 +17,21 @@ export const FooterStyled = styled(MotionFlex) `
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        /* width: 200px; */
+        width: 100%;
+        margin-right: 3rem;
+        @media${device.mobileL}{
+            margin-right: 0rem
+        }
     }
 
     .social-media {
-        justify-content: space-between;
-        /* width: 100px; */
+        justify-content: flex-end;
         align-items: center;
+        width: 100%;
+        margin-left: 3rem;
+        @media${device.mobileL}{
+            margin-right: 0rem
+        }
     }
 
     .social-icon{
