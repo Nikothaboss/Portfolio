@@ -1,16 +1,16 @@
 import { AppWrapper, colors } from "./app.styled";
 import { useColorModeValue } from "@chakra-ui/color-mode";
 import { AnimatePresence } from "framer-motion";
+import { useResize } from "./utils/resize";
+import { GlobalStyle } from "./app.styled";
+import {Switch, Route, useLocation} from "react-router-dom"
 import Header from "./Components/Header/Header";
 import Home from "./Components/Home/Home";
-import { useResize } from "./utils/resize";
-import {Switch, Route, useLocation} from "react-router-dom"
 import About from "./Components/About/About";
 import Timeline from "./Components/Timeline/Timeline";
-import { GlobalStyle } from "./app.styled";
 import Tech from "./Components/Tech/Tech";
 import Projects from "./Components/Projects/Projects";
-import Footer from "./Components/Footer/Footer";
+
 
 
 
