@@ -19,7 +19,7 @@ export const ProjectsStyled = styled(MotionFlex) `
         flex-direction: column;
 
         img{
-            /* width: 50%; */
+            width: 50%;
             max-height: 350px;
             border-radius: 10px;
         }
@@ -35,6 +35,7 @@ export const ProjectsStyled = styled(MotionFlex) `
         padding-left: 1rem;
         justify-content: space-between;
         height: 50%;
+        width: 50%
     }
 
     .description-container{

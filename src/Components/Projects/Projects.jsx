@@ -11,7 +11,7 @@ const Project = ({project, description, image, projectLink, id, tech}) => {
     <Flex className="project" id={id}>
         <img src={image} alt={project} />
         <Flex className="project-info">
-            <Text as="h2" fontSize="1.5rem" fontWeight="600" p="1rem" fontFamily={fonts.poppins}>{project}</Text>
+            <Text as="h2" fontSize="1.5rem" fontWeight="600" p="0 1rem" fontFamily={fonts.poppins}>{project}</Text>
             <Flex className="description-container">
                 <Text>{description}</Text>
             </Flex>
@@ -35,7 +35,7 @@ const Projects = () => {
     return (
         <ProjectsStyled minH="100vh" >
             <Flex className="projects-container">
-                <Text as="h1" fontSize="3.5rem" fontFamily={fonts.poppins}>Projects</Text>
+                <Text as="h1" fontSize="3.5rem" fontFamily={fonts.poppins} pb="2rem">Projects</Text>
                {projectsData.map(({project, description, image, id, tech})=> (
                    <Project project={project} description={description} image={image} key={id} tech={tech} />
                ))} 
