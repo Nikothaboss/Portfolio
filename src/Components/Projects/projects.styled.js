@@ -26,13 +26,17 @@ export const ProjectsStyled = styled(MotionFlex) `
         height: 100%;
         border-radius: 10px;
         object-fit: cover;
-
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
+        /* box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; */
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
             
     }
 
     .project{
         margin-bottom: 2rem;
         justify-content: center;
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
+
         /* position: relative; */
     }
 
@@ -42,12 +46,15 @@ export const ProjectsStyled = styled(MotionFlex) `
         justify-content: space-between;
         max-height: 100%;
         width: 100%;
+        border-radius: 10px;
         z-index: 9;
     }
 
     .description-container{
-        background: #07151a;
+        /* background: #07151a; */
         /* font-size: 1.2rem; */
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
         padding: 1rem;
         border-radius: 10px;
         @media${device.tablet}{
@@ -69,7 +76,8 @@ export const ProjectsStyled = styled(MotionFlex) `
     }
 
     .tech-item{
-        margin-right: 1rem
+        margin-right: 1rem;
+        margin-bottom: .5rem;
     }
 
     
