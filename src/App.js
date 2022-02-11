@@ -10,6 +10,7 @@ import About from "./Components/About/About";
 import Timeline from "./Components/Timeline/Timeline";
 import Tech from "./Components/Tech/Tech";
 import Projects from "./Components/Projects/Projects";
+import BurgerMenu from "./Components/BurgerMenu/BurgerMenu"
 
 
 
@@ -26,6 +27,7 @@ function App() {
     <GlobalStyle/>
     <AppWrapper bg={bg} minH="100vh" maxH="100%" maxW="100vw"  className="App">
         {screenWidth > 950 && (<Header/>)}
+        {screenWidth < 950 && (<BurgerMenu/>)}
       <AnimatePresence exitBeforeEnter={true}>
         <Switch location={location} key={location.key}>
           <Route  path="/" exact>

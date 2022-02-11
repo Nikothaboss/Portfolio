@@ -12,7 +12,7 @@ import { aboutAnimations } from "../../utils/animations";
 const Project = ({project, description, image, projectLink, id, tech}) => {
     const {screenWidth} = useResize()
     const aboutProjectBg = useColorModeValue("#dadada", "#09161b" )
-    const bg = useColorModeValue("#adadaddf", "#081e26df" )
+    const bg = useColorModeValue("#9b9b9bdf", "#081e26df" )
     return (
     <Flex className="project" id={id}>
         <Flex position="relative" justifyContent={"center"}  >

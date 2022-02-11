@@ -1,4 +1,3 @@
-import { useSpring } from "framer-motion"
 
 export const homeAnimations = {
 
@@ -98,20 +97,6 @@ export const aboutAnimations = {
   }
 }
 
-export const textBounce = {
-  test: {
-    scale: [.9, 1, .9],
-    transition: {
-      type: "spring",
-      bounce: 1,
-      scale: {
-        duration: 1,
-        repeat: 1.5
-      }
-    }
-  },
-}
-
 export const footerAnimations = {
   initial: {
     opacity: 0,
@@ -133,6 +118,39 @@ export const footerAnimations = {
   },
   exit: {
 
+  }
+}
+
+export const BurgerAnimations = {
+  opened: {
+    rotate: 45
+  },
+  closed: {
+    rotate: 360,
+    transition: {
+      type: "spring",
+      stiffness: 0,
+      bounce: 100,
+      rotate: {
+        duration: .5
+      }
+    }
+  },
+  menuExit: {
+    x: "-120%",
+    transition: {
+      x: {
+        duration: .5
+      }
+    }
+  },
+  menuEnter: {
+    x: 0,
+    transition: {
+      x: {
+        duration: .5
+      }
+    }
   }
 }
 

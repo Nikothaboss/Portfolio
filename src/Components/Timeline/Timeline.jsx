@@ -6,7 +6,6 @@ import { useFetch } from "../../utils/fetch"
 import { useResize } from "../../utils/resize"
 import { aboutAnimations } from "../../utils/animations"
 import { motion } from "framer-motion"
-import { textBounce } from "../../utils/animations"
 import { useRef } from "react"
 
 import Footer from "../Footer/Footer"
@@ -62,7 +61,7 @@ const Timeline = () => {
                   fontFamily={fonts.poppins}
                   color={colors.lightDetailColor}
                   opacity=".7"
-                  variants={textBounce}
+                  
                   >Timeline</MotionText>
 
                 <Flex flexDir={"column"} w="100%">
