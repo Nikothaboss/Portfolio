@@ -8,17 +8,22 @@ const MotionCenter = motion(Center);
 
 export const AboutStyled = styled(MotionFlex) `
     width: 100%;
+    height: 100vh
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-y: scroll;
     
 
     .about-container{
-        height: 100%;
+        height: 100vh;
+        width: 91vw;
+        padding: 1rem;
         flex-direction: column;
         align-items: center;
         padding: 20px;
         justify-content: space-between;
+        overflow-y: scroll;
 
         @media${device.mobileL}{
             padding: 0;

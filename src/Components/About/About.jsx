@@ -53,8 +53,8 @@ const About = () => {
                     </Text>
                 </Link>
             </TimelineBtn>
+            <Footer />
         </Flex>
-        <Footer />
         </AboutStyled>
     )
 }

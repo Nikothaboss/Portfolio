@@ -64,8 +64,8 @@ const Tech = () => {
                     <NewTech logo={d3Logo} tech={"D3.js"} extraClass={"middle"} />
                     <NewTech logo={colorMode === "dark" ? threeLogo : darkThreeLogo} tech={"Three.js"} />
                 </Flex>
-            </Flex>
             <Footer />
+            </Flex>
         </TechStyled>
             
         </>

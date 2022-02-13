@@ -7,6 +7,7 @@ const MotionFlex = motion(Flex)
 
 export const TechStyled = styled(MotionFlex) `
     flex-direction: column;
+    height: 100vh;
     /* padding: 40px; */
     justify-content: space-between;
     position: relative;
@@ -107,8 +108,10 @@ export const TechStyled = styled(MotionFlex) `
         flex-direction: column;
         /* border: 1px solid red; */
         max-width: 1200px;
-        margin-bottom: 2rem;
-        padding: 40px;
+        height: 100%;
+        overflow-y: scroll;
+        
+        padding: 20px;
     }
 
 `
