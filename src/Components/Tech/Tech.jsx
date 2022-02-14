@@ -43,7 +43,7 @@ const Tech = () => {
     return (
         <>
         <TechStyled w="100%" variants={aboutAnimations} initial="pageInitial" animate="pageEnter" exit="pageExit">
-            <Flex className="content-container">
+            <Flex className="content-container" w={screenWidth < 950 ? "100vw" : "94vw"}>
                 <Text as="h1" fontFamily={fonts.poppins} fontSize="3.5rem" fontWeight={600} className="heading">
                     Technologies
                 </Text>

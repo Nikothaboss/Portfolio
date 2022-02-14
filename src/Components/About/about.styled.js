@@ -17,16 +17,19 @@ export const AboutStyled = styled(MotionFlex) `
 
     .about-container{
         height: 100vh;
-        width: 91vw;
+        width: 90vw;
         padding: 1rem;
         flex-direction: column;
         align-items: center;
         padding: 20px;
         justify-content: space-between;
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
 
         @media${device.mobileL}{
             padding: 0;
+        }
+        @media${device.tablet}{
+            width: 100vw
         }
     }
 

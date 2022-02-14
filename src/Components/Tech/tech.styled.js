@@ -106,12 +106,13 @@ export const TechStyled = styled(MotionFlex) `
 
     .content-container{
         flex-direction: column;
+        justify-content: space-between;
         /* border: 1px solid red; */
-        max-width: 1200px;
+        /* max-width: 100vw; */
         height: 100%;
-        overflow-y: scroll;
+        overflow-x: hidden;
         
-        padding: 20px;
+        padding: 40px;
     }
 
 `

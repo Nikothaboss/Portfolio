@@ -1,6 +1,6 @@
 import { ProjectsStyled } from "./projects.styled"
 import { Text, Flex, Center, useColorModeValue } from "@chakra-ui/react";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { projectsData } from "./projectsData";
 import { colors, device, fonts } from "../../app.styled";
 import Footer from "../Footer/Footer";
@@ -9,7 +9,7 @@ import { aboutAnimations } from "../../utils/animations";
 
 
 
-const Project = ({project, description, image, projectLink, id, tech}) => {
+const Project = ({project, description, image, projectLink, netlifyLink, id, tech}) => {
     const {screenWidth} = useResize()
     const aboutProjectBg = useColorModeValue("#dadada", "#09161b" )
     const bg = useColorModeValue("#9b9b9bdf", "#081e26df" )
@@ -32,8 +32,11 @@ const Project = ({project, description, image, projectLink, id, tech}) => {
                     ))}
                 </ul>
                 <Flex justifyContent="flex-start" p="1rem">
-                    <a href={projectLink}>
+                    <a target="_blank" href={projectLink} class="github link">
                         <FaGithub size="2rem" />
+                    </a>
+                    <a target="_blank" href={netlifyLink}>
+                        <FaExternalLinkAlt size="2rem" />
                     </a>
                 </Flex>
             </Flex>
@@ -53,8 +56,16 @@ const Projects = () => {
           >
             <Flex className="projects-container">
                 <Text as="h1" fontSize="2.5rem" fontFamily={fonts.poppins} fontWeight={600} pb="2rem" >Projects i've worked on</Text>
-               {projectsData.map(({project, description, image, id, tech})=> (
-                   <Project project={project} description={description} image={image} key={id} tech={tech} />
+               {projectsData.map(({project, description, image, id, tech, projectLink, netlifyLink})=> (
+                   <Project 
+                   project={project} 
+                   description={description} 
+                   image={image} 
+                   key={id} 
+                   tech={tech} 
+                   projectLink={projectLink}
+                   netlifyLink={netlifyLink}
+                   />
                ))} 
             <Footer />
             </Flex>

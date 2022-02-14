@@ -24,6 +24,7 @@ export const ProjectsStyled = styled(MotionFlex) `
     img{
         width: 100%;
         height: 100%;
+        max-height: 435px;
         border-radius: 10px;
         object-fit: cover;
         /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
@@ -78,6 +79,10 @@ export const ProjectsStyled = styled(MotionFlex) `
     .tech-item{
         margin-right: 1rem;
         margin-bottom: .5rem;
+    }
+
+    .github{
+        margin-right: 2rem;
     }
 
     
