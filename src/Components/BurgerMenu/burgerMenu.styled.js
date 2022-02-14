@@ -12,9 +12,14 @@ export const BurgerMenuStyled = styled(MotionFlex) `
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         height: 70%;
         font-size: 1.5rem;
         text-align: center;
+
+        .colormode{
+            cursor: pointer;
+        }
 
     }
 `

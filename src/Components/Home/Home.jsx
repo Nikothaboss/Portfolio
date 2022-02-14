@@ -86,9 +86,11 @@ const Home = () => {
                 />
             {screenWidth < 768 && (
                 <>
-                    <Box p="10px 60px" mb="1rem" borderRadius="30px" color="white" bg={colors.ctaColor}>
-                        About Me
-                    </Box>
+                    <Link to="/About">
+                        <Box p="10px 60px" mb="1rem" borderRadius="30px" color="white" bg={colors.ctaColor}>
+                            About Me
+                        </Box>
+                    </Link>
                     
                     <Center flexDir={"column"}>
                         <MotionBox variants={homeAnimations} animate={"arrowAnimation2"}>

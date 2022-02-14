@@ -7,11 +7,18 @@ import { BurgerAnimations } from "../../utils/animations";
 import { useColorModeValue } from "@chakra-ui/react";
 import { colors } from "../../app.styled";
 import { Link } from "react-router-dom";
+import {MdOutlineWbSunny} from "react-icons/md"
+import {FaMoon} from "react-icons/fa"
+import { useColorMode } from "@chakra-ui/react";
+// import { useColorModeValue } from "@chakra-ui/react";
 
  const BurgerMenu = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen(!menuOpen)
     const closeMenu = () => setMenuOpen(false)
+    const {colorMode, toggleColorMode} = useColorMode()
+    const bg = useColorModeValue(colors.lightDetailColor, colors.darkDetailColor);
+
 
     const MotionCenter = motion(Center);
     const menuBg = useColorModeValue(colors.lightModeBg, colors.darkModeBg)
@@ -61,6 +68,7 @@ import { Link } from "react-router-dom";
                         <Link onClick={closeMenu} to="Timeline">
                             <li>Timeline</li>
                         </Link>
+                        <li className="colormode">{colorMode === "dark" ? <MdOutlineWbSunny cursor="pointer" size="1.8rem" onClick={toggleColorMode} color={bg} /> : <FaMoon size="1.6rem" color={bg} onClick={toggleColorMode} />}</li>
                     </ul>
                 </MotionCenter>
                 )}
