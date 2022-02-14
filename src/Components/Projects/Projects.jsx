@@ -2,7 +2,7 @@ import { ProjectsStyled } from "./projects.styled"
 import { Text, Flex, Center, useColorModeValue } from "@chakra-ui/react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { projectsData } from "./projectsData";
-import { colors, device, fonts } from "../../app.styled";
+import { fonts } from "../../app.styled";
 import Footer from "../Footer/Footer";
 import { useResize } from "../../utils/resize";
 import { aboutAnimations } from "../../utils/animations";
@@ -47,6 +47,7 @@ const Project = ({project, description, image, projectLink, netlifyLink, id, tec
 
 const Projects = () => {
     console.log(projectsData)
+    const {screenWidth} = useResize()
     return (
         <ProjectsStyled minH="100vh"
           variants={aboutAnimations}
@@ -55,7 +56,7 @@ const Projects = () => {
           exit="pageExit"
           >
             <Flex className="projects-container">
-                <Text as="h1" fontSize="2.5rem" fontFamily={fonts.poppins} fontWeight={600} pb="2rem" >Projects i've worked on</Text>
+                <Text as="h1" fontSize={screenWidth < 575 ? "2rem" : "2.5rem"} fontFamily={fonts.poppins} fontWeight={600} pb="2rem" >Projects i've worked on</Text>
                {projectsData.map(({project, description, image, id, tech, projectLink, netlifyLink})=> (
                    <Project 
                    project={project} 

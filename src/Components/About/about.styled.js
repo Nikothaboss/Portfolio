@@ -17,7 +17,7 @@ export const AboutStyled = styled(MotionFlex) `
 
     .about-container{
         height: 100vh;
-        width: 90vw;
+        width: 100%;
         padding: 1rem;
         flex-direction: column;
         align-items: center;

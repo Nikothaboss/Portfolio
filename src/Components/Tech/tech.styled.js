@@ -112,7 +112,7 @@ export const TechStyled = styled(MotionFlex) `
         height: 100%;
         overflow-x: hidden;
         
-        padding: 40px 0 40px 40px;;
+        padding: 40px ;
     }
 
 `
