@@ -23,7 +23,7 @@ export const AboutStyled = styled(MotionFlex) `
         align-items: center;
         padding: 20px;
         justify-content: space-between;
-        /* overflow-y: scroll; */
+        overflow-y: scroll;
 
         @media${device.mobileL}{
             padding: 0;
