@@ -23,6 +23,7 @@ export const ProjectsStyled = styled(MotionFlex) `
 
     img{
         width: 100%;
+        max-width: 990px;
         height: 100%;
         max-height: 435px;
         border-radius: 10px;
@@ -36,6 +37,7 @@ export const ProjectsStyled = styled(MotionFlex) `
     .project{
         margin-bottom: 2rem;
         justify-content: center;
+        max-width: 100%;
         /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
 
         /* position: relative; */
@@ -47,6 +49,7 @@ export const ProjectsStyled = styled(MotionFlex) `
         justify-content: space-between;
         max-height: 100%;
         width: 100%;
+        /* max-width: 990px; */
         border-radius: 10px;
         z-index: 9;
     }

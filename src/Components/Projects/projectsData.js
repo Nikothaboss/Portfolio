@@ -1,11 +1,11 @@
-import gameZonePic from "../../img/projects/gameZone.png"
+import gameZonePic from "../../img/projects/gameZone2.png"
 import gameOfBlog from "../../img/projects/gameOfBlogs.JPG"
 import reactTaskManager from "../..//img/projects/reactTaskManager2.png"
 export const projectsData = [
     {
         id: 1,
-        project: "Game Zone e-commerce",
-        description: "This was an exam on my second year at Noroff, the task was to make an e-commerce for a fictional company of my choosing using a self made Strapi API hosted on Heroku",
+        project: "Game Zone E-commerce",
+        description: "This was an exam on my second year at Noroff, the task was to make an e-commerce for a fictional company of my choosing using a self made Strapi API hosted on Heroku. I also created a login system so the user can add, edit and delete products",
         image: gameZonePic,
         projectLink: "https://github.com/Nikothaboss/Semesterprosjekt-2",
         tech: ["React", "Strapi", "Heroku", "Chakra UI", "Framer Motion"],
@@ -14,7 +14,7 @@ export const projectsData = [
     },
     {
         id: 2,
-        project: "Game of blogs",
+        project: "Game of Blogs",
         description: "This was my first exam at Noroff, here I was tasked with making a blog of my choosing. On this task I used a Wordpress headless API with vanilla JavaScript, HTML and CSS",
         image: gameOfBlog,
         projectLink: "https://github.com/Nikothaboss/Project-Exam-1",

@@ -15,7 +15,7 @@ const Project = ({project, description, image, projectLink, netlifyLink, id, tec
     const bg = useColorModeValue("#9b9b9bdf", "#081e26df" )
     return (
     <Flex className="project" id={id}>
-        <Flex position="relative" justifyContent={"center"}  >
+        <Flex position="relative" w="100%" justifyContent={"center"}>
             <Center  position={screenWidth < 1200 && "absolute"} bottom="0" top="0" w="100%" h="100%" >
                 <img src={image} alt={project} />
             </Center>
@@ -56,7 +56,7 @@ const Projects = () => {
           exit="pageExit"
           >
             <Flex className="projects-container">
-                <Text as="h1" fontSize={screenWidth < 575 ? "2rem" : "2.5rem"} fontFamily={fonts.poppins} fontWeight={600} pb="2rem" >Projects i've worked on</Text>
+                <Text as="h1" fontSize={screenWidth < 575 ? "2rem" : "2.5rem"} fontFamily={fonts.poppins} fontWeight={600} pb="2rem" >Projects I've Worked On</Text>
                {projectsData.map(({project, description, image, id, tech, projectLink, netlifyLink})=> (
                    <Project 
                    project={project} 
