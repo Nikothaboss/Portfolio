@@ -33,18 +33,18 @@ const About = () => {
             >
           
             </Circle>
-            <Text as="h1" m="10" fontFamily={fonts.poppins} fontSize={24} letterSpacing={2.5} color={colors.ctaColor} fontWeight={600}>
+            <Text as="h1"  fontFamily={fonts.poppins} fontSize={24} letterSpacing={2.5} color={colors.ctaColor} fontWeight={600}>
                 Nikolai Reed-Larsen
             </Text>
-            <Text fontFamily={fonts.poppins} p={screenWidth < 768 ? "0 2.3rem" : "0 0rem"} maxWidth={650} mb="5" fontSize={screenWidth < 768 ? 14 : 16}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            </Text>
+            <Flex flexDir="column">
+                <Text fontFamily={fonts.poppins} p={screenWidth < 768 ? "0 2.3rem" : "0 0rem"} maxWidth={650} mb="5" fontSize={screenWidth < 768 ? 14 : 16}>
+                    Hi, my name is Nikolai and I make things that live on the internet. Since I was a kid I've been above average interested in technologies, it started out with video games witch led me to modding games. This gave me a good understanding of the internet and how to get what I wanted from it
+                </Text>
                 
-            <Text fontFamily={fonts.poppins} p={screenWidth < 768 ? "0 2.3rem" : "0"} maxW={650} fontSize={screenWidth < 768 ? 14 : 16}>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </Text>
+                <Text fontFamily={fonts.poppins} p={screenWidth < 768 ? "0 2.3rem" : "0"} maxW={650} fontSize={screenWidth < 768 ? 14 : 16}>
+                   I'm currently on my last year at Noroff School of Technoligies studying Front End Development. In my first year I landed a job as a mentor at the same school, I enjoy learning and teaching everything about development from front end to back end.
+                </Text>
+            </Flex>
 
             <TimelineBtn whileHover={{scale: 1.1}} whileTap={{scale: 0.99}} cursor="pointer">
                 <Link to="/Timeline">
