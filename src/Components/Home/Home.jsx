@@ -33,11 +33,15 @@ const Home = () => {
         
             {screenWidth < 768 && (
                 <Center flexDir={"column"}>
-                    <Text fontSize={"1.2rem"} fontWeight={500} mb="1rem">
-                        Technoligies
-                    </Text>
+                    <Link to="/Tech">
+                        <Text fontSize={"1.2rem"} fontWeight={500} mb="1rem">
+                            Technoligies
+                        </Text>
+                    </Link>
                     <MotionBox variants={homeAnimations} animate={"arrowAnimation"}>
-                        <FaArrowUp size={"1.2rem"} color={arrowColor} />
+                        <Link to="/Tech">
+                            <FaArrowUp size={"1.2rem"} color={arrowColor} />
+                        </Link>
                     </MotionBox>
 
                 </Center>
@@ -88,11 +92,15 @@ const Home = () => {
                     
                     <Center flexDir={"column"}>
                         <MotionBox variants={homeAnimations} animate={"arrowAnimation2"}>
-                            <FaArrowDown size={"1.2rem"} color={arrowColor} />
+                            <Link to="/Projects">
+                                <FaArrowDown size={"1.2rem"} color={arrowColor} />
+                            </Link>
                         </MotionBox>
-                        <Text fontSize={"1.2rem"} fontWeight={500}  >
-                            Projects
-                        </Text>
+                        <Link to="/Projects">
+                            <Text fontSize={"1.2rem"} fontWeight={500}  >
+                                Projects
+                            </Text>
+                        </Link>
                     </Center>
                 </>
 
