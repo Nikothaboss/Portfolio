@@ -35,7 +35,7 @@ const Home = () => {
                 <Center flexDir={"column"}>
                     <Link to="/Tech">
                         <Text fontSize={"1.2rem"} fontWeight={500} mb="1rem">
-                            Technoligies
+                            Technologies
                         </Text>
                     </Link>
                     <MotionBox variants={homeAnimations} animate={"arrowAnimation"}>

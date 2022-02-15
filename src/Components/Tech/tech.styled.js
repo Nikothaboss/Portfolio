@@ -13,22 +13,32 @@ export const TechStyled = styled(MotionFlex) `
     position: relative;
     /* align-items: center; */
     @media${device.tablet} {
-        /* align-items: flex-start; */
         
-
         .exp{
-            width: 100%
+            
+            flex-direction: column;
             
         }
 
+        .techObj{
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+
+        .techObj2{
+            margin-right: 0;
+            margin-bottom: 1rem;
+        }
+
         .newTech{
+            flex-direction: column;
+            justify-content: flex-start
             
-            justify-content: space-between;
-            align-items: flex-start;
         }
 
         .intro-text{
             width: 100%;
+            margin: 1rem 0 1.5rem 0;;
         }
 
         .heading{
@@ -44,9 +54,7 @@ export const TechStyled = styled(MotionFlex) `
             
         }
 
-        .exp{
-            flex-direction: column;
-        }
+        
 
         .techObj{
             justify-content: flex-start;
@@ -75,18 +83,18 @@ export const TechStyled = styled(MotionFlex) `
     }
 
     .logo-lg{
-        width: 100px;
+        width: 85px;
         @media${device.mobileL}{
             width: 150px;
         }
     }
 
-    .exp{
+    /* .exp{
         justify-content: space-between;
         margin-top: 2rem;
         align-items: flex-end;
         
-    }
+    } */
 
     .spacer{
         margin: 2rem 0;
@@ -107,12 +115,36 @@ export const TechStyled = styled(MotionFlex) `
     .content-container{
         flex-direction: column;
         justify-content: space-between;
-        /* border: 1px solid red; */
-        /* max-width: 100vw; */
         height: 100%;
         overflow-x: hidden;
-        
         padding: 40px ;
+    }
+
+    .techObj2{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 1rem;
+        border-radius: 10px;
+        height: 180px;
+        margin-right: 1rem;
+        img{
+            margin-bottom: 1rem;
+        }
+    }
+    .techObj{
+        width: 100%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-right: 1rem;
+        
+
+        img{
+            margin-bottom: 1rem;
+        }
+    }
+
+    .intro-text{
+        max-width: 600px;
     }
 
 `

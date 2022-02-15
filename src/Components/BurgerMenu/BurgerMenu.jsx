@@ -68,7 +68,7 @@ import { useColorMode } from "@chakra-ui/react";
                         <Link onClick={closeMenu} to="Timeline">
                             <li>Timeline</li>
                         </Link>
-                        <li className="colormode">{colorMode === "dark" ? <MdOutlineWbSunny cursor="pointer" size="1.8rem" onClick={toggleColorMode} color={bg} /> : <FaMoon size="1.6rem" color={bg} onClick={toggleColorMode} />}</li>
+                        <li onClick={closeMenu} className="colormode">{colorMode === "dark" ? <MdOutlineWbSunny cursor="pointer" size="1.8rem" onClick={toggleColorMode} color={bg} /> : <FaMoon size="1.6rem" color={bg} onClick={toggleColorMode} />}</li>
                     </ul>
                 </MotionCenter>
                 )}
