@@ -21,7 +21,7 @@ export const AboutStyled = styled(MotionFlex) `
         padding: 1rem;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        /* padding: 20px; */
         justify-content: space-between;
         overflow-y: scroll;
 
