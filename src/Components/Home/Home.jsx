@@ -68,7 +68,7 @@ const Home = () => {
                                 About Me
                             </Flex>
                         </Link>
-                        <Box h="1rem"></Box>
+                        <Box h="1.2rem"></Box>
                         <MotionBox  variants={homeAnimations} animate="arrowAnimation">
                             <FaArrowUp size={"1.5rem"} color={arrowColor} />
                         </MotionBox>
