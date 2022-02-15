@@ -80,16 +80,17 @@ const Timeline = () => {
 
             <Flex 
               className="timeline" 
-            //   h="100%"
+              h="100%"
               w={screenWidth > 768 ? "100%" : screenWidth < 550 ? "100%" : "70%" }
             //   overflowX={ "scroll"}  
               justifyContent={"flex-end"}
-              alignItems={"flex-start"}
+              alignItems={"center"}
             >
                 <Flex 
                   justifyContent={screenWidth > 768 ? "space-evenly" : "flex-end"} 
                   w="100%"
                   flexDir={screenWidth < 768 ? "column" : "row"}
+                  className="timelineObj"
                   >
                     {data.map(({year, text, id}) => {
                         return(

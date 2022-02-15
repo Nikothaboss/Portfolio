@@ -8,13 +8,19 @@ export const TimelineStyled = styled(MotionFlex) `
 
 
 .timeline{
-    border-top: 2px solid white;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    /* border-top: 2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; */
     width: 100%;
+    
+
+}
+
+.timelineObj{
     @media${device.tablet}{
         border: none
     }
-
+    /* border-top: 2px solid white; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
 .year{
