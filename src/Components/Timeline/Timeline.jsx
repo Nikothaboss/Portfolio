@@ -34,6 +34,7 @@ const Timeline = () => {
     const {screenWidth} = useResize()
     const letter = useRef(null)
     const MotionText = motion(Text)
+    const color = useColorModeValue(colors.darkModeBg, colors.lightModeBg)
 
     console.log(letter)
 
@@ -55,12 +56,12 @@ const Timeline = () => {
                   as="h1"
                   fontSize={ screenWidth < 425 ? "2rem" : "2.5rem"}
                   textAlign={"left"}
+                  fontWeight="600"
                   w="100%"
-                  
+                  // color={color}
                   ref={letter}
                   fontFamily={fonts.poppins}
-                  // color={colors.lightDetailColor}
-                  opacity=".7"
+                  // opacity=".7"
                   
                   >Timeline</MotionText>
 
