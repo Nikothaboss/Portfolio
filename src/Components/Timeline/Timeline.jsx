@@ -53,25 +53,25 @@ const Timeline = () => {
             <Flex flexDir={"column"} w="100%" >
                 <MotionText
                   as="h1"
-                  fontSize={ screenWidth < 425 ? "4rem" : "5rem"}
+                  fontSize={ screenWidth < 425 ? "2rem" : "2.5rem"}
                   textAlign={"left"}
                   w="100%"
                   
                   ref={letter}
                   fontFamily={fonts.poppins}
-                  color={colors.lightDetailColor}
+                  // color={colors.lightDetailColor}
                   opacity=".7"
                   
                   >Timeline</MotionText>
 
                 <Flex flexDir={"column"} w="100%">
-                    <Text w="100%" p="0px 10px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
+                    <Text w="100%" p="0px 0px" fontSize={screenWidth > 768 ? "1.2rem" : "1rem"} fontWeight="600">
                         This is a short summary of my developer journey this far
                     </Text>
-                    <Text w="100%" p="0px 10px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
+                    <Text w="100%" p="0px 0px" fontSize={screenWidth > 768 ? "1.2rem" : "1rem"} fontWeight="600">
                         I have found my passion in life and
                     </Text>
-                    <Text w="100%" p="0px 10px" fontSize={screenWidth > 768 ? "1.5rem" : "1rem"}>
+                    <Text w="100%" p="0px 0px" fontSize={screenWidth > 768 ? "1.2rem" : "1rem"} fontWeight="600">
                         I'm eager to make you or your company a part of this journey
                     </Text>
                 </Flex>  

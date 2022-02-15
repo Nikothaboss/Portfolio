@@ -145,6 +145,7 @@ export const TechStyled = styled(MotionFlex) `
 
     .intro-text{
         max-width: 600px;
+        margin-bottom: 1rem;
     }
 
 `
