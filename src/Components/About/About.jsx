@@ -26,8 +26,8 @@ const About = () => {
             backgroundImage={ProfilePic} 
             backgroundPosition="center" 
             backgroundSize="cover"  
-            w="250px" 
-            h="250px"
+            w={screenWidth < 425 ? "200px" : "250px"} 
+            h={screenWidth < 425 ? "200px" : "250px"}
             className='profile-pic'
             m="2rem 0 1rem 0"
             
@@ -38,11 +38,11 @@ const About = () => {
             <Text as="h1" textAlign={"center"}  fontFamily={fonts.poppins} fontSize={24} letterSpacing={2.5} color={colors.ctaColor} fontWeight={600} mb="2rem">
                 Nikolai Reed-Larsen
             </Text>
-                <Text fontFamily={fonts.poppins} p={screenWidth < 768 ? "0 2.3rem" : "0 0rem"} maxWidth={650} mb="5" fontSize={screenWidth < 768 ? "14px" : "1.1rem"}>
+                <Text fontFamily={fonts.poppins}  maxWidth={650} mb="5" fontSize={screenWidth < 768 ? "14px" : "1.1rem"}>
                     Hi, my name is Nikolai and I make things that live on the internet. Since I was a kid I've been above average interested in technologies, it started out with video games witch led me to modding games. This gave me a good understanding of the internet and how to get what I wanted from it
                 </Text>
                 
-                <Text fontFamily={fonts.poppins} p={screenWidth < 768 ? "0 2.3rem" : "0"} maxW={650} fontSize={screenWidth < 768 ? 14 : "1.1rem"}>
+                <Text fontFamily={fonts.poppins}  maxW={650} fontSize={screenWidth < 768 ? 14 : "1.1rem"}>
                    I'm currently on my last year at Noroff School of Technoligies studying Front End Development. In my first year I landed a job as a mentor at the same school, I enjoy learning and teaching everything about development from front end to back end.
                 </Text>
             </Flex>

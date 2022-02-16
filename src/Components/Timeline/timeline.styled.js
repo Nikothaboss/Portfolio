@@ -25,6 +25,9 @@ export const TimelineStyled = styled(MotionFlex) `
 
 .year{
     width: 100%;
+    @media${device.mobileL}{
+        flex-direction: column;
+    }
 }
 
 .timeline-container {

@@ -8,7 +8,7 @@ export const FooterStyled = styled(MotionFlex) `
     
     width: 100%;
     /* border: 1px solid red; */
-    padding: 25px;
+    padding: 25px 0;
     justify-content: space-between;
     align-items: center;
 

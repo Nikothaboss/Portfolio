@@ -22,7 +22,7 @@ const Home = () => {
         justifyContent="space-around" 
         alignItems="center" 
         h="100vh" 
-        p="20px 0px" 
+        p="3rem 0px" 
         w="100%"
         overflow="hidden"
         variants={homeAnimations}

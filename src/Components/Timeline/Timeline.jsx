@@ -63,9 +63,11 @@ const Timeline = () => {
                   fontFamily={fonts.poppins}
                   // opacity=".7"
                   
-                  >Timeline</MotionText>
+                  >
+                      Timeline
+                </MotionText>
 
-                <Flex flexDir={"column"} w="100%">
+                <Flex flexDir={"column"} w="100%" mb="1rem">
                     <Text w="100%" p="0px 0px" fontSize={screenWidth > 768 ? "1.2rem" : "1rem"} fontWeight="600">
                         This is a short summary of my developer journey this far
                     </Text>
@@ -104,8 +106,8 @@ const Timeline = () => {
                     })}
                 </Flex>
             </Flex>
-            </Flex>
             <Footer />
+            </Flex>
         </TimelineStyled>
     )
 }

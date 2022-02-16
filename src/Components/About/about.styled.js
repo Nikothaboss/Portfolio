@@ -18,7 +18,7 @@ export const AboutStyled = styled(MotionFlex) `
     .about-container{
         height: 100vh;
         width: 100%;
-        padding: 1rem;
+        padding: 20px;
         flex-direction: column;
         align-items: center;
         /* padding: 20px; */
@@ -26,7 +26,7 @@ export const AboutStyled = styled(MotionFlex) `
         overflow-y: scroll;
 
         @media${device.mobileL}{
-            padding: 0;
+            padding: 20px;
         }
         @media${device.tablet}{
             width: 100vw
